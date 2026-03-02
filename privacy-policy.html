@@ -14,15 +14,14 @@
       theme: {
         extend: {
           colors: {
-            ocean: {
-              50:  '#f0f9ff', 100: '#e0f2fe', 200: '#b9e5fe', 300: '#7cd4fd',
-              400: '#36bffa', 500: '#0ca5eb', 600: '#0084c9', 700: '#0169a3',
-              800: '#065986', 900: '#0b4a6f', 950: '#072f4a',
-            },
-            gold: { 400: '#facc15', 500: '#eab308' },
+            dark:   { DEFAULT: '#0a0a12', 100: '#12121e', 200: '#1a1a2e' },
+            crimson:{ DEFAULT: '#DF2B41', 100: '#ff3d57', 200: '#b82235' },
+            cyan:   { DEFAULT: '#18D6FF', 100: '#a5efff', 200: '#5be3ff', 300: '#0fb8db', 400: '#0a8ea8' },
+            flame:  { DEFAULT: '#FF4F18', 100: '#ff7a50', 200: '#e6430f' },
+            royal:  { DEFAULT: '#0F38D9', 100: '#3a5ce6', 200: '#0b2cb0' },
           },
           fontFamily: {
-            display: ['"Pirata One"', 'cursive'],
+            display: ['"Good Brush"', 'cursive'],
             body: ['Inter', 'system-ui', 'sans-serif'],
           },
         },
@@ -31,25 +30,32 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pirata+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'Good Brush';
+      src: url('assets/Good Brush.ttf') format('truetype');
+      font-weight: normal; font-style: normal; font-display: swap;
+    }
+  </style>
 </head>
 
-<body class="bg-ocean-950 text-ocean-200 font-body antialiased">
+<body class="bg-dark text-white/70 font-body antialiased">
 
   <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 bg-ocean-950/80 backdrop-blur-md border-b border-white/10">
+  <nav class="fixed top-0 w-full z-50 bg-dark/85 backdrop-blur-md border-b border-white/5">
     <div class="max-w-3xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="index.html" class="font-display text-2xl text-gold-400 tracking-wide">Blackbeard's Wake</a>
-      <a href="index.html" class="text-sm hover:text-gold-400 transition-colors">&larr; Back to Home</a>
+      <a href="index.html" class="font-display text-2xl text-flame tracking-wide">Blackbeard's Wake</a>
+      <a href="index.html" class="text-sm text-white/50 hover:text-cyan transition-colors">&larr; Back to Home</a>
     </div>
   </nav>
 
   <!-- CONTENT -->
   <main class="max-w-3xl mx-auto px-6 pt-28 pb-20">
-    <h1 class="font-display text-4xl text-gold-400 mb-2">Privacy Policy</h1>
-    <p class="text-ocean-400 text-sm mb-10">Last updated: March 2, 2026</p>
+    <h1 class="font-display text-4xl text-flame mb-2">Privacy Policy</h1>
+    <p class="text-white/40 text-sm mb-10">Last updated: March 2, 2026</p>
 
-    <div class="space-y-8 leading-relaxed text-ocean-200">
+    <div class="space-y-8 leading-relaxed text-white/70">
 
       <p>
         This Privacy Policy describes how Blackbeard's Wake ("the App", "we", "us", or "our")
@@ -59,25 +65,25 @@
 
       <!-- Section 1 -->
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">1. Information We Collect</h2>
+        <h2 class="text-xl font-semibold text-cyan mb-3">1. Information We Collect</h2>
 
-        <h3 class="text-lg font-medium text-ocean-100 mt-4 mb-2">Information We Do NOT Collect</h3>
-        <ul class="list-disc list-inside space-y-1 text-ocean-300">
+        <h3 class="text-lg font-medium text-white/90 mt-4 mb-2">Information We Do NOT Collect</h3>
+        <ul class="list-disc list-inside space-y-1 text-white/60">
           <li>We do <strong class="text-white">not</strong> require you to create an account or log in.</li>
           <li>We do <strong class="text-white">not</strong> collect your name, email address, phone number, or any personal contact information.</li>
           <li>We do <strong class="text-white">not</strong> access your camera, microphone, contacts, photos, or location.</li>
         </ul>
 
-        <h3 class="text-lg font-medium text-ocean-100 mt-4 mb-2">Information Collected Automatically</h3>
+        <h3 class="text-lg font-medium text-white/90 mt-4 mb-2">Information Collected Automatically</h3>
         <p>When you use the App, certain information may be collected automatically through third-party services:</p>
-        <ul class="list-disc list-inside space-y-1 text-ocean-300 mt-2">
+        <ul class="list-disc list-inside space-y-1 text-white/60 mt-2">
           <li><strong class="text-white">Device identifiers</strong> (e.g., IDFA, IDFV) for advertising purposes</li>
           <li><strong class="text-white">Usage data</strong> such as app interactions, session duration, and crash reports</li>
           <li><strong class="text-white">IP address</strong> (used by third-party ad networks for general geographic targeting)</li>
           <li><strong class="text-white">Device information</strong> such as device model, OS version, and screen size</li>
         </ul>
 
-        <h3 class="text-lg font-medium text-ocean-100 mt-4 mb-2">Locally Stored Data</h3>
+        <h3 class="text-lg font-medium text-white/90 mt-4 mb-2">Locally Stored Data</h3>
         <p>
           Game progress, high scores, and user preferences (such as the "Remove Ads" purchase status) are stored
           <strong class="text-white">locally on your device</strong> using standard device storage. This data is not
@@ -87,37 +93,37 @@
 
       <!-- Section 2 -->
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">2. Third-Party Services</h2>
+        <h2 class="text-xl font-semibold text-cyan mb-3">2. Third-Party Services</h2>
 
-        <h3 class="text-lg font-medium text-ocean-100 mt-4 mb-2">Google AdMob (Advertising)</h3>
+        <h3 class="text-lg font-medium text-white/90 mt-4 mb-2">Google AdMob (Advertising)</h3>
         <p>
           We use Google AdMob to display advertisements. AdMob may collect device identifiers, IP addresses,
           and usage data to serve relevant ads.
         </p>
-        <ul class="list-disc list-inside space-y-1 text-ocean-300 mt-2">
-          <li><a href="https://policies.google.com/privacy" class="text-ocean-400 underline hover:text-white" target="_blank" rel="noopener">Google Privacy Policy</a></li>
-          <li><a href="https://policies.google.com/technologies/ads" class="text-ocean-400 underline hover:text-white" target="_blank" rel="noopener">Google Ads Privacy</a></li>
+        <ul class="list-disc list-inside space-y-1 text-white/60 mt-2">
+          <li><a href="https://policies.google.com/privacy" class="text-cyan underline hover:text-white" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+          <li><a href="https://policies.google.com/technologies/ads" class="text-cyan underline hover:text-white" target="_blank" rel="noopener">Google Ads Privacy</a></li>
         </ul>
 
-        <h3 class="text-lg font-medium text-ocean-100 mt-4 mb-2">Apple StoreKit (In-App Purchases)</h3>
+        <h3 class="text-lg font-medium text-white/90 mt-4 mb-2">Apple StoreKit (In-App Purchases)</h3>
         <p>
           We use Apple's StoreKit framework to process the "Remove Ads" in-app purchase. All payment processing
           is handled entirely by Apple. We do not receive or store any payment information, credit card numbers,
           or Apple ID credentials.
         </p>
-        <ul class="list-disc list-inside space-y-1 text-ocean-300 mt-2">
-          <li><a href="https://www.apple.com/legal/privacy/" class="text-ocean-400 underline hover:text-white" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
+        <ul class="list-disc list-inside space-y-1 text-white/60 mt-2">
+          <li><a href="https://www.apple.com/legal/privacy/" class="text-cyan underline hover:text-white" target="_blank" rel="noopener">Apple Privacy Policy</a></li>
         </ul>
       </section>
 
       <!-- Section 3 -->
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">3. Advertising & Ad Personalization</h2>
+        <h2 class="text-xl font-semibold text-cyan mb-3">3. Advertising & Ad Personalization</h2>
         <p>
           The App displays interstitial advertisements between gameplay sessions. You may be prompted
           (via Apple's App Tracking Transparency framework) to allow or deny tracking for personalized advertising.
         </p>
-        <ul class="list-disc list-inside space-y-1 text-ocean-300 mt-2">
+        <ul class="list-disc list-inside space-y-1 text-white/60 mt-2">
           <li>If you <strong class="text-white">allow</strong> tracking, ads may be personalized based on your activity across other apps and websites.</li>
           <li>If you <strong class="text-white">deny</strong> tracking, you will still see ads, but they will not be personalized.</li>
           <li>You can purchase <strong class="text-white">"Remove Ads"</strong> within the App to permanently remove all advertisements.</li>
@@ -126,19 +132,19 @@
 
       <!-- Section 4 -->
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">4. Children's Privacy</h2>
+        <h2 class="text-xl font-semibold text-cyan mb-3">4. Children's Privacy</h2>
         <p>
           The App is not specifically directed at children under the age of 13. We do not knowingly collect
           personal information from children under 13. If you are a parent or guardian and believe your child
           has provided personal information through the App, please
-          <a href="support.html" class="text-ocean-400 underline hover:text-white">contact us</a>
+          <a href="support.html" class="text-cyan underline hover:text-white">contact us</a>
           so we can take appropriate action.
         </p>
       </section>
 
       <!-- Section 5 -->
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">5. Data Retention</h2>
+        <h2 class="text-xl font-semibold text-cyan mb-3">5. Data Retention</h2>
         <p>
           We do not operate servers or databases that store your personal data. All game data is stored
           locally on your device. Third-party services (Google AdMob, Apple) retain data according to their
@@ -148,7 +154,7 @@
 
       <!-- Section 6 -->
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">6. Data Security</h2>
+        <h2 class="text-xl font-semibold text-cyan mb-3">6. Data Security</h2>
         <p>
           We take reasonable measures to protect the information associated with the App. However, no method
           of electronic transmission or storage is 100% secure, and we cannot guarantee absolute security.
@@ -157,9 +163,9 @@
 
       <!-- Section 7 -->
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">7. Your Rights</h2>
+        <h2 class="text-xl font-semibold text-cyan mb-3">7. Your Rights</h2>
         <p>Depending on your jurisdiction, you may have the right to:</p>
-        <ul class="list-disc list-inside space-y-1 text-ocean-300 mt-2">
+        <ul class="list-disc list-inside space-y-1 text-white/60 mt-2">
           <li><strong class="text-white">Opt out of personalized advertising</strong> via Apple's App Tracking Transparency prompt, or Settings &rarr; Privacy &amp; Security &rarr; Tracking.</li>
           <li><strong class="text-white">Delete local app data</strong> by uninstalling the App from your device.</li>
           <li><strong class="text-white">Request information</strong> about data collected by third-party services by contacting those services directly.</li>
@@ -168,7 +174,7 @@
 
       <!-- Section 8 -->
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">8. Changes to This Privacy Policy</h2>
+        <h2 class="text-xl font-semibold text-cyan mb-3">8. Changes to This Privacy Policy</h2>
         <p>
           We may update this Privacy Policy from time to time. Changes will be posted on this page with an
           updated "Last updated" date. Your continued use of the App after changes constitutes acceptance
@@ -178,10 +184,10 @@
 
       <!-- Section 9 -->
       <section>
-        <h2 class="text-xl font-semibold text-white mb-3">9. Contact Us</h2>
+        <h2 class="text-xl font-semibold text-cyan mb-3">9. Contact Us</h2>
         <p>
           If you have any questions or concerns about this Privacy Policy, please reach out via our
-          <a href="support.html" class="text-ocean-400 underline hover:text-white">support page</a>.
+          <a href="support.html" class="text-cyan underline hover:text-white">support page</a>.
         </p>
       </section>
 
@@ -189,12 +195,12 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-ocean-950 border-t border-white/10 py-10">
-    <div class="max-w-3xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ocean-400">
+  <footer class="bg-dark border-t border-white/5 py-10">
+    <div class="max-w-3xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
       <p>&copy; 2026 Blackbeard's Wake. All rights reserved.</p>
       <div class="flex gap-6">
-        <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-        <a href="support.html" class="hover:text-white transition-colors">Support</a>
+        <a href="privacy-policy.html" class="hover:text-cyan transition-colors">Privacy Policy</a>
+        <a href="support.html" class="hover:text-cyan transition-colors">Support</a>
       </div>
     </div>
   </footer>

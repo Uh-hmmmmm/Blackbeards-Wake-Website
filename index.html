@@ -12,7 +12,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/og-image.png" />
 
-  <!-- Favicon (replace with your icon) -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/favicon.png" />
 
   <!-- Tailwind Play CDN -->
@@ -22,68 +22,76 @@
       theme: {
         extend: {
           colors: {
-            ocean: {
-              50:  '#f0f9ff',
-              100: '#e0f2fe',
-              200: '#b9e5fe',
-              300: '#7cd4fd',
-              400: '#36bffa',
-              500: '#0ca5eb',
-              600: '#0084c9',
-              700: '#0169a3',
-              800: '#065986',
-              900: '#0b4a6f',
-              950: '#072f4a',
-            },
-            gold: {
-              400: '#facc15',
-              500: '#eab308',
-              600: '#ca8a04',
-            },
+            // Dark-to-light gradient spectrum
+            dark:   { DEFAULT: '#0a0a12', 100: '#12121e', 200: '#1a1a2e' },
+            crimson:{ DEFAULT: '#DF2B41', 100: '#ff3d57', 200: '#b82235', 300: '#8a1928' },
+            cyan:   { DEFAULT: '#18D6FF', 100: '#a5efff', 200: '#5be3ff', 300: '#0fb8db', 400: '#0a8ea8' },
+            flame:  { DEFAULT: '#FF4F18', 100: '#ff7a50', 200: '#e6430f', 300: '#cc3a0d' },
+            royal:  { DEFAULT: '#0F38D9', 100: '#3a5ce6', 200: '#0b2cb0', 300: '#081f80' },
           },
           fontFamily: {
-            display: ['"Pirata One"', 'cursive'],
-            body: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['"Good Brush"', 'cursive'],
+            body:    ['Inter', 'system-ui', 'sans-serif'],
           },
         },
       },
     }
   </script>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (body only) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pirata+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* Smooth gradient background for ocean feel */
-    .bg-ocean-gradient {
-      background: linear-gradient(180deg, #072f4a 0%, #0b4a6f 40%, #0169a3 100%);
+    /* Custom header font */
+    @font-face {
+      font-family: 'Good Brush';
+      src: url('assets/Good Brush.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
     }
-    .bg-wave-pattern {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='%230b4a6f' fill-opacity='0.3' d='M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,100 L0,100Z'/%3E%3C/svg%3E");
-      background-size: cover;
-      background-position: bottom;
+    /* Gradient backgrounds */
+    .bg-hero-gradient {
+      background: linear-gradient(160deg, #0a0a12 0%, #12121e 30%, #1a1a2e 50%, #DF2B41 150%);
     }
-    /* Subtle float animation for hero phone mockup */
+    .bg-cta-gradient {
+      background: linear-gradient(135deg, #0a0a12 0%, #0F38D9 60%, #18D6FF 140%);
+    }
+    .bg-section-alt {
+      background: linear-gradient(180deg, #12121e 0%, #0a0a12 100%);
+    }
+    /* Diagonal slash decoration — Spiderverse vibes */
+    .slash-divider {
+      background: linear-gradient(170deg, transparent 48%, #DF2B41 48%, #DF2B41 52%, transparent 52%);
+    }
+    /* Glow effects */
+    .glow-flame { text-shadow: 0 0 40px rgba(255,79,24,0.35), 0 0 80px rgba(255,79,24,0.15); }
+    .glow-cyan  { box-shadow: 0 0 30px rgba(24,214,255,0.2), 0 0 60px rgba(24,214,255,0.08); }
+    /* Float animation */
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-12px); }
+      0%, 100% { transform: translateY(0px) rotate(-1deg); }
+      50%      { transform: translateY(-14px) rotate(1deg); }
     }
     .animate-float { animation: float 4s ease-in-out infinite; }
+    /* Bold stroke text for feature headings */
+    .text-stroke {
+      -webkit-text-stroke: 1px rgba(255,255,255,0.15);
+    }
   </style>
 </head>
 
-<body class="bg-ocean-950 text-white font-body antialiased">
+<body class="bg-dark text-white font-body antialiased">
 
   <!-- ============ NAV ============ -->
-  <nav class="fixed top-0 w-full z-50 bg-ocean-950/80 backdrop-blur-md border-b border-white/10">
+  <nav class="fixed top-0 w-full z-50 bg-dark/85 backdrop-blur-md border-b border-white/5">
     <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="/" class="font-display text-2xl text-gold-400 tracking-wide">Blackbeard's Wake</a>
+      <a href="/" class="font-display text-2xl text-flame tracking-wide">Blackbeard's Wake</a>
       <div class="flex items-center gap-6 text-sm font-medium">
-        <a href="#features" class="hover:text-gold-400 transition-colors">Features</a>
-        <a href="#screenshots" class="hover:text-gold-400 transition-colors">Screenshots</a>
-        <a href="#download" class="bg-gold-500 text-ocean-950 px-4 py-2 rounded-full font-semibold hover:bg-gold-400 transition-colors">
+        <a href="#features" class="text-white/70 hover:text-cyan transition-colors">Features</a>
+        <a href="#screenshots" class="text-white/70 hover:text-cyan transition-colors">Screenshots</a>
+        <a href="#download" class="bg-flame text-white px-5 py-2 rounded-full font-semibold hover:bg-flame-100 transition-colors shadow-lg shadow-flame/25">
           Download
         </a>
       </div>
@@ -91,22 +99,24 @@
   </nav>
 
   <!-- ============ HERO ============ -->
-  <header class="relative bg-ocean-gradient min-h-screen flex items-center overflow-hidden">
-    <!-- Wave decoration at bottom -->
-    <div class="absolute bottom-0 left-0 w-full h-24 bg-wave-pattern"></div>
+  <header class="relative bg-hero-gradient min-h-screen flex items-center overflow-hidden">
+    <!-- Angled slash accent -->
+    <div class="absolute inset-0 slash-divider opacity-20 pointer-events-none"></div>
+    <!-- Subtle radial glow behind content -->
+    <div class="absolute top-1/3 left-1/4 w-[600px] h-[600px] bg-crimson/10 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-cyan/8 rounded-full blur-[100px] pointer-events-none"></div>
 
-    <div class="max-w-5xl mx-auto px-6 pt-28 pb-32 grid md:grid-cols-2 gap-12 items-center">
+    <div class="max-w-5xl mx-auto px-6 pt-28 pb-32 grid md:grid-cols-2 gap-12 items-center relative z-10">
       <!-- Text side -->
       <div class="space-y-6">
-        <h1 class="font-display text-5xl md:text-6xl leading-tight text-gold-400 drop-shadow-lg">
-          Sail. Encircle. Conquer.
+        <h1 class="font-display text-5xl md:text-7xl leading-[0.95] text-flame glow-flame tracking-wide">
+          Sail.<br/>Encircle.<br/>Conquer.
         </h1>
-        <p class="text-lg text-ocean-200 leading-relaxed max-w-md">
+        <p class="text-lg text-white/70 leading-relaxed max-w-md">
           Command your pirate ship through treacherous waters. Draw loops around enemies to capture them, 
           dodge cannonballs, and grow your fleet across ever-changing seas.
         </p>
         <div class="flex flex-wrap gap-4 pt-2">
-          <!-- App Store Badge -->
           <a href="#" id="appstore-link" class="inline-block hover:opacity-90 transition-opacity">
             <img
               src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
@@ -120,9 +130,8 @@
       <!-- Phone mockup side -->
       <div class="flex justify-center md:justify-end">
         <div class="animate-float">
-          <!-- Replace with actual screenshot in a phone frame -->
-          <div class="w-64 h-[520px] bg-ocean-800 rounded-[2.5rem] border-4 border-ocean-700 shadow-2xl overflow-hidden flex items-center justify-center">
-            <p class="text-ocean-400 text-sm text-center px-6">
+          <div class="w-64 h-[520px] bg-dark-100 rounded-[2.5rem] border-2 border-cyan/30 shadow-2xl glow-cyan overflow-hidden flex items-center justify-center">
+            <p class="text-white/30 text-sm text-center px-6">
               <!-- Replace this with: <img src="assets/screenshot-hero.png" alt="Gameplay" class="w-full h-full object-cover" /> -->
               Screenshot<br/>goes here
             </p>
@@ -133,40 +142,43 @@
   </header>
 
   <!-- ============ FEATURES ============ -->
-  <section id="features" class="bg-ocean-950 py-24">
+  <section id="features" class="bg-dark py-24 relative overflow-hidden">
+    <!-- Accent glow -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[2px] bg-gradient-to-r from-transparent via-flame/50 to-transparent"></div>
+
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="font-display text-4xl text-gold-400 text-center mb-16">How It Works</h2>
+      <h2 class="font-display text-4xl md:text-5xl text-flame text-center mb-16 glow-flame">How It Works</h2>
 
       <div class="grid md:grid-cols-3 gap-10">
         <!-- Feature 1 -->
-        <div class="text-center space-y-4">
-          <div class="w-16 h-16 mx-auto bg-ocean-800 rounded-2xl flex items-center justify-center text-3xl">
+        <div class="text-center space-y-4 group">
+          <div class="w-16 h-16 mx-auto bg-dark-100 border border-cyan/20 rounded-2xl flex items-center justify-center text-3xl group-hover:border-cyan/50 group-hover:shadow-lg group-hover:shadow-cyan/10 transition-all">
             🚢
           </div>
-          <h3 class="text-xl font-semibold text-white">Sail the Seas</h3>
-          <p class="text-ocean-300 leading-relaxed">
+          <h3 class="text-xl font-semibold text-cyan">Sail the Seas</h3>
+          <p class="text-white/60 leading-relaxed">
             Navigate your ship with intuitive touch controls across a vast procedural ocean filled with enemies and treasure.
           </p>
         </div>
 
         <!-- Feature 2 -->
-        <div class="text-center space-y-4">
-          <div class="w-16 h-16 mx-auto bg-ocean-800 rounded-2xl flex items-center justify-center text-3xl">
+        <div class="text-center space-y-4 group">
+          <div class="w-16 h-16 mx-auto bg-dark-100 border border-crimson/20 rounded-2xl flex items-center justify-center text-3xl group-hover:border-crimson/50 group-hover:shadow-lg group-hover:shadow-crimson/10 transition-all">
             🌀
           </div>
-          <h3 class="text-xl font-semibold text-white">Encircle Enemies</h3>
-          <p class="text-ocean-300 leading-relaxed">
+          <h3 class="text-xl font-semibold text-cyan">Encircle Enemies</h3>
+          <p class="text-white/60 leading-relaxed">
             Draw loops around enemy ships and sea creatures with your trail to capture them. Bigger loops, bigger rewards.
           </p>
         </div>
 
         <!-- Feature 3 -->
-        <div class="text-center space-y-4">
-          <div class="w-16 h-16 mx-auto bg-ocean-800 rounded-2xl flex items-center justify-center text-3xl">
+        <div class="text-center space-y-4 group">
+          <div class="w-16 h-16 mx-auto bg-dark-100 border border-flame/20 rounded-2xl flex items-center justify-center text-3xl group-hover:border-flame/50 group-hover:shadow-lg group-hover:shadow-flame/10 transition-all">
             ⚔️
           </div>
-          <h3 class="text-xl font-semibold text-white">Grow & Conquer</h3>
-          <p class="text-ocean-300 leading-relaxed">
+          <h3 class="text-xl font-semibold text-cyan">Grow & Conquer</h3>
+          <p class="text-white/60 leading-relaxed">
             Level up through phases, upgrade your ship, and dominate the leaderboard. How long can you survive?
           </p>
         </div>
@@ -175,26 +187,26 @@
   </section>
 
   <!-- ============ SCREENSHOTS ============ -->
-  <section id="screenshots" class="bg-ocean-900 py-24">
+  <section id="screenshots" class="bg-section-alt py-24">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="font-display text-4xl text-gold-400 text-center mb-16">Screenshots</h2>
+      <h2 class="font-display text-4xl md:text-5xl text-flame text-center mb-16 glow-flame">Screenshots</h2>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <!-- Replace these placeholders with actual screenshots -->
-        <div class="aspect-[9/19.5] bg-ocean-800 rounded-2xl border border-ocean-700 flex items-center justify-center text-ocean-500 text-sm">1</div>
-        <div class="aspect-[9/19.5] bg-ocean-800 rounded-2xl border border-ocean-700 flex items-center justify-center text-ocean-500 text-sm">2</div>
-        <div class="aspect-[9/19.5] bg-ocean-800 rounded-2xl border border-ocean-700 flex items-center justify-center text-ocean-500 text-sm">3</div>
-        <div class="aspect-[9/19.5] bg-ocean-800 rounded-2xl border border-ocean-700 flex items-center justify-center text-ocean-500 text-sm">4</div>
+        <div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 flex items-center justify-center text-white/20 text-sm hover:border-cyan/30 transition-colors">1</div>
+        <div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 flex items-center justify-center text-white/20 text-sm hover:border-cyan/30 transition-colors">2</div>
+        <div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 flex items-center justify-center text-white/20 text-sm hover:border-cyan/30 transition-colors">3</div>
+        <div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 flex items-center justify-center text-white/20 text-sm hover:border-cyan/30 transition-colors">4</div>
       </div>
-      <p class="text-center text-ocean-500 text-sm mt-4">Drop your screenshots into <code class="text-ocean-400">assets/</code> and update the img tags.</p>
+      <p class="text-center text-white/30 text-sm mt-4">Drop screenshots into <code class="text-cyan/60">assets/</code> and update the img tags.</p>
     </div>
   </section>
 
   <!-- ============ DOWNLOAD CTA ============ -->
-  <section id="download" class="bg-ocean-gradient py-24">
-    <div class="max-w-2xl mx-auto px-6 text-center space-y-8">
-      <h2 class="font-display text-4xl text-gold-400">Ready to Set Sail?</h2>
-      <p class="text-ocean-200 text-lg">Free to play. No account required. Just pure pirate action.</p>
+  <section id="download" class="bg-cta-gradient py-24 relative overflow-hidden">
+    <div class="absolute inset-0 slash-divider opacity-10 pointer-events-none"></div>
+    <div class="max-w-2xl mx-auto px-6 text-center space-y-8 relative z-10">
+      <h2 class="font-display text-4xl md:text-5xl text-flame glow-flame">Ready to Set Sail?</h2>
+      <p class="text-white/70 text-lg">Free to play. No account required. Just pure pirate action.</p>
       <a href="#" class="inline-block hover:opacity-90 transition-opacity">
         <img
           src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
@@ -206,12 +218,12 @@
   </section>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="bg-ocean-950 border-t border-white/10 py-10">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ocean-400">
+  <footer class="bg-dark border-t border-white/5 py-10">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
       <p>&copy; 2026 Blackbeard's Wake. All rights reserved.</p>
       <div class="flex gap-6">
-        <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-        <a href="support.html" class="hover:text-white transition-colors">Support</a>
+        <a href="privacy-policy.html" class="hover:text-cyan transition-colors">Privacy Policy</a>
+        <a href="support.html" class="hover:text-cyan transition-colors">Support</a>
       </div>
     </div>
   </footer>

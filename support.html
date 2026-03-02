@@ -14,15 +14,14 @@
       theme: {
         extend: {
           colors: {
-            ocean: {
-              50:  '#f0f9ff', 100: '#e0f2fe', 200: '#b9e5fe', 300: '#7cd4fd',
-              400: '#36bffa', 500: '#0ca5eb', 600: '#0084c9', 700: '#0169a3',
-              800: '#065986', 900: '#0b4a6f', 950: '#072f4a',
-            },
-            gold: { 400: '#facc15', 500: '#eab308' },
+            dark:   { DEFAULT: '#0a0a12', 100: '#12121e', 200: '#1a1a2e' },
+            crimson:{ DEFAULT: '#DF2B41', 100: '#ff3d57', 200: '#b82235' },
+            cyan:   { DEFAULT: '#18D6FF', 100: '#a5efff', 200: '#5be3ff', 300: '#0fb8db', 400: '#0a8ea8' },
+            flame:  { DEFAULT: '#FF4F18', 100: '#ff7a50', 200: '#e6430f' },
+            royal:  { DEFAULT: '#0F38D9', 100: '#3a5ce6', 200: '#0b2cb0' },
           },
           fontFamily: {
-            display: ['"Pirata One"', 'cursive'],
+            display: ['"Good Brush"', 'cursive'],
             body: ['Inter', 'system-ui', 'sans-serif'],
           },
         },
@@ -31,89 +30,96 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pirata+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    @font-face {
+      font-family: 'Good Brush';
+      src: url('assets/Good Brush.ttf') format('truetype');
+      font-weight: normal; font-style: normal; font-display: swap;
+    }
+  </style>
 </head>
 
-<body class="bg-ocean-950 text-ocean-200 font-body antialiased">
+<body class="bg-dark text-white/70 font-body antialiased">
 
   <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 bg-ocean-950/80 backdrop-blur-md border-b border-white/10">
+  <nav class="fixed top-0 w-full z-50 bg-dark/85 backdrop-blur-md border-b border-white/5">
     <div class="max-w-3xl mx-auto flex items-center justify-between px-6 py-4">
-      <a href="index.html" class="font-display text-2xl text-gold-400 tracking-wide">Blackbeard's Wake</a>
-      <a href="index.html" class="text-sm hover:text-gold-400 transition-colors">&larr; Back to Home</a>
+      <a href="index.html" class="font-display text-2xl text-flame tracking-wide">Blackbeard's Wake</a>
+      <a href="index.html" class="text-sm text-white/50 hover:text-cyan transition-colors">&larr; Back to Home</a>
     </div>
   </nav>
 
   <!-- CONTENT -->
   <main class="max-w-3xl mx-auto px-6 pt-28 pb-20">
-    <h1 class="font-display text-4xl text-gold-400 mb-10">Support</h1>
+    <h1 class="font-display text-4xl text-flame mb-10">Support</h1>
 
     <div class="space-y-10 leading-relaxed">
 
       <!-- Contact -->
-      <section class="bg-ocean-900 rounded-2xl p-8 border border-ocean-800">
-        <h2 class="text-xl font-semibold text-white mb-4">Contact Us</h2>
-        <p class="text-ocean-300 mb-4">
+      <section class="bg-dark-100 rounded-2xl p-8 border border-white/5">
+        <h2 class="text-xl font-semibold text-cyan mb-4">Contact Us</h2>
+        <p class="text-white/60 mb-4">
           Have a question, found a bug, or just want to say hi? Reach out and we'll get back to you as soon as possible.
         </p>
         <a
           href="mailto:support@blackbeardswake.com"
-          class="inline-flex items-center gap-2 bg-gold-500 text-ocean-950 px-6 py-3 rounded-full font-semibold hover:bg-gold-400 transition-colors"
+          class="inline-flex items-center gap-2 bg-flame text-white px-6 py-3 rounded-full font-semibold hover:bg-flame-100 transition-colors shadow-lg shadow-flame/25"
         >
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
           </svg>
           support@blackbeardswake.com
         </a>
-        <p class="text-ocean-500 text-sm mt-3">
+        <p class="text-white/30 text-sm mt-3">
           <!-- Update this email to your real support address -->
         </p>
       </section>
 
       <!-- FAQ -->
       <section>
-        <h2 class="text-xl font-semibold text-white mb-6">Frequently Asked Questions</h2>
+        <h2 class="text-xl font-semibold text-cyan mb-6">Frequently Asked Questions</h2>
 
         <div class="space-y-6">
-          <div>
+          <div class="bg-dark-100 rounded-xl p-5 border border-white/5 hover:border-cyan/20 transition-colors">
             <h3 class="font-medium text-white">How do I remove ads?</h3>
-            <p class="text-ocean-300 mt-1">
+            <p class="text-white/60 mt-1">
               Tap the gear icon in the top corner to open Settings, then tap "Remove Ads". It's a one-time
               purchase of $1.99 that permanently removes all advertisements.
             </p>
           </div>
 
-          <div>
+          <div class="bg-dark-100 rounded-xl p-5 border border-white/5 hover:border-cyan/20 transition-colors">
             <h3 class="font-medium text-white">I purchased Remove Ads but I'm still seeing ads.</h3>
-            <p class="text-ocean-300 mt-1">
+            <p class="text-white/60 mt-1">
               Go to Settings and tap "Restore Purchases". This will verify your purchase with Apple and
               re-enable the ad-free experience. If the issue persists, try restarting the app.
             </p>
           </div>
 
-          <div>
+          <div class="bg-dark-100 rounded-xl p-5 border border-white/5 hover:border-cyan/20 transition-colors">
             <h3 class="font-medium text-white">How do I play?</h3>
-            <p class="text-ocean-300 mt-1">
+            <p class="text-white/60 mt-1">
               Use the on-screen joystick to steer your ship. Sail in a loop around enemies and objects
               to encircle and capture them. The bigger your loops, the more points you earn. Avoid getting
               hit by enemies — you only have 3 lives!
             </p>
           </div>
 
-          <div>
+          <div class="bg-dark-100 rounded-xl p-5 border border-white/5 hover:border-cyan/20 transition-colors">
             <h3 class="font-medium text-white">Is my game progress saved?</h3>
-            <p class="text-ocean-300 mt-1">
+            <p class="text-white/60 mt-1">
               High scores are saved locally on your device. Your "Remove Ads" purchase is tied to your
               Apple ID and can be restored on any device using "Restore Purchases" in the Settings.
             </p>
           </div>
 
-          <div>
+          <div class="bg-dark-100 rounded-xl p-5 border border-white/5 hover:border-cyan/20 transition-colors">
             <h3 class="font-medium text-white">Does the app collect my personal data?</h3>
-            <p class="text-ocean-300 mt-1">
+            <p class="text-white/60 mt-1">
               We do not collect personal information. The app uses Google AdMob for advertising, which may
               collect device identifiers for ad targeting. See our
-              <a href="privacy-policy.html" class="text-ocean-400 underline hover:text-white">Privacy Policy</a>
+              <a href="privacy-policy.html" class="text-cyan underline hover:text-white">Privacy Policy</a>
               for full details.
             </p>
           </div>
@@ -124,12 +130,12 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-ocean-950 border-t border-white/10 py-10">
-    <div class="max-w-3xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ocean-400">
+  <footer class="bg-dark border-t border-white/5 py-10">
+    <div class="max-w-3xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
       <p>&copy; 2026 Blackbeard's Wake. All rights reserved.</p>
       <div class="flex gap-6">
-        <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
-        <a href="support.html" class="hover:text-white transition-colors">Support</a>
+        <a href="privacy-policy.html" class="hover:text-cyan transition-colors">Privacy Policy</a>
+        <a href="support.html" class="hover:text-cyan transition-colors">Support</a>
       </div>
     </div>
   </footer>
