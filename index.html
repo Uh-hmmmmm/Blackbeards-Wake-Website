@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blackbeard's Wake — Sail. Encircle. Conquer.</title>
+  <meta name="description" content="Command your pirate ship, draw loops around enemies, and conquer the seas in Blackbeard's Wake — a fast-paced mobile action game." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Blackbeard's Wake" />
+  <meta property="og:description" content="Sail. Encircle. Conquer. A fast-paced pirate action game for iOS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.png" />
+
+  <!-- Favicon (replace with your icon) -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ocean: {
+              50:  '#f0f9ff',
+              100: '#e0f2fe',
+              200: '#b9e5fe',
+              300: '#7cd4fd',
+              400: '#36bffa',
+              500: '#0ca5eb',
+              600: '#0084c9',
+              700: '#0169a3',
+              800: '#065986',
+              900: '#0b4a6f',
+              950: '#072f4a',
+            },
+            gold: {
+              400: '#facc15',
+              500: '#eab308',
+              600: '#ca8a04',
+            },
+          },
+          fontFamily: {
+            display: ['"Pirata One"', 'cursive'],
+            body: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pirata+One&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Smooth gradient background for ocean feel */
+    .bg-ocean-gradient {
+      background: linear-gradient(180deg, #072f4a 0%, #0b4a6f 40%, #0169a3 100%);
+    }
+    .bg-wave-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='%230b4a6f' fill-opacity='0.3' d='M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,100 L0,100Z'/%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: bottom;
+    }
+    /* Subtle float animation for hero phone mockup */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-12px); }
+    }
+    .animate-float { animation: float 4s ease-in-out infinite; }
+  </style>
+</head>
+
+<body class="bg-ocean-950 text-white font-body antialiased">
+
+  <!-- ============ NAV ============ -->
+  <nav class="fixed top-0 w-full z-50 bg-ocean-950/80 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="/" class="font-display text-2xl text-gold-400 tracking-wide">Blackbeard's Wake</a>
+      <div class="flex items-center gap-6 text-sm font-medium">
+        <a href="#features" class="hover:text-gold-400 transition-colors">Features</a>
+        <a href="#screenshots" class="hover:text-gold-400 transition-colors">Screenshots</a>
+        <a href="#download" class="bg-gold-500 text-ocean-950 px-4 py-2 rounded-full font-semibold hover:bg-gold-400 transition-colors">
+          Download
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="relative bg-ocean-gradient min-h-screen flex items-center overflow-hidden">
+    <!-- Wave decoration at bottom -->
+    <div class="absolute bottom-0 left-0 w-full h-24 bg-wave-pattern"></div>
+
+    <div class="max-w-5xl mx-auto px-6 pt-28 pb-32 grid md:grid-cols-2 gap-12 items-center">
+      <!-- Text side -->
+      <div class="space-y-6">
+        <h1 class="font-display text-5xl md:text-6xl leading-tight text-gold-400 drop-shadow-lg">
+          Sail. Encircle. Conquer.
+        </h1>
+        <p class="text-lg text-ocean-200 leading-relaxed max-w-md">
+          Command your pirate ship through treacherous waters. Draw loops around enemies to capture them, 
+          dodge cannonballs, and grow your fleet across ever-changing seas.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <!-- App Store Badge -->
+          <a href="#" id="appstore-link" class="inline-block hover:opacity-90 transition-opacity">
+            <img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              alt="Download on the App Store"
+              class="h-14"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- Phone mockup side -->
+      <div class="flex justify-center md:justify-end">
+        <div class="animate-float">
+          <!-- Replace with actual screenshot in a phone frame -->
+          <div class="w-64 h-[520px] bg-ocean-800 rounded-[2.5rem] border-4 border-ocean-700 shadow-2xl overflow-hidden flex items-center justify-center">
+            <p class="text-ocean-400 text-sm text-center px-6">
+              <!-- Replace this with: <img src="assets/screenshot-hero.png" alt="Gameplay" class="w-full h-full object-cover" /> -->
+              Screenshot<br/>goes here
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features" class="bg-ocean-950 py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="font-display text-4xl text-gold-400 text-center mb-16">How It Works</h2>
+
+      <div class="grid md:grid-cols-3 gap-10">
+        <!-- Feature 1 -->
+        <div class="text-center space-y-4">
+          <div class="w-16 h-16 mx-auto bg-ocean-800 rounded-2xl flex items-center justify-center text-3xl">
+            🚢
+          </div>
+          <h3 class="text-xl font-semibold text-white">Sail the Seas</h3>
+          <p class="text-ocean-300 leading-relaxed">
+            Navigate your ship with intuitive touch controls across a vast procedural ocean filled with enemies and treasure.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="text-center space-y-4">
+          <div class="w-16 h-16 mx-auto bg-ocean-800 rounded-2xl flex items-center justify-center text-3xl">
+            🌀
+          </div>
+          <h3 class="text-xl font-semibold text-white">Encircle Enemies</h3>
+          <p class="text-ocean-300 leading-relaxed">
+            Draw loops around enemy ships and sea creatures with your trail to capture them. Bigger loops, bigger rewards.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="text-center space-y-4">
+          <div class="w-16 h-16 mx-auto bg-ocean-800 rounded-2xl flex items-center justify-center text-3xl">
+            ⚔️
+          </div>
+          <h3 class="text-xl font-semibold text-white">Grow & Conquer</h3>
+          <p class="text-ocean-300 leading-relaxed">
+            Level up through phases, upgrade your ship, and dominate the leaderboard. How long can you survive?
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCREENSHOTS ============ -->
+  <section id="screenshots" class="bg-ocean-900 py-24">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="font-display text-4xl text-gold-400 text-center mb-16">Screenshots</h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <!-- Replace these placeholders with actual screenshots -->
+        <div class="aspect-[9/19.5] bg-ocean-800 rounded-2xl border border-ocean-700 flex items-center justify-center text-ocean-500 text-sm">1</div>
+        <div class="aspect-[9/19.5] bg-ocean-800 rounded-2xl border border-ocean-700 flex items-center justify-center text-ocean-500 text-sm">2</div>
+        <div class="aspect-[9/19.5] bg-ocean-800 rounded-2xl border border-ocean-700 flex items-center justify-center text-ocean-500 text-sm">3</div>
+        <div class="aspect-[9/19.5] bg-ocean-800 rounded-2xl border border-ocean-700 flex items-center justify-center text-ocean-500 text-sm">4</div>
+      </div>
+      <p class="text-center text-ocean-500 text-sm mt-4">Drop your screenshots into <code class="text-ocean-400">assets/</code> and update the img tags.</p>
+    </div>
+  </section>
+
+  <!-- ============ DOWNLOAD CTA ============ -->
+  <section id="download" class="bg-ocean-gradient py-24">
+    <div class="max-w-2xl mx-auto px-6 text-center space-y-8">
+      <h2 class="font-display text-4xl text-gold-400">Ready to Set Sail?</h2>
+      <p class="text-ocean-200 text-lg">Free to play. No account required. Just pure pirate action.</p>
+      <a href="#" class="inline-block hover:opacity-90 transition-opacity">
+        <img
+          src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+          alt="Download on the App Store"
+          class="h-16 mx-auto"
+        />
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-ocean-950 border-t border-white/10 py-10">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-ocean-400">
+      <p>&copy; 2026 Blackbeard's Wake. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="support.html" class="hover:text-white transition-colors">Support</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
