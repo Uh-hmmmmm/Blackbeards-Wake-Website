@@ -3,14 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blackbeard's Wake — Sail. Encircle. Conquer.</title>
-  <meta name="description" content="Command your pirate ship, draw loops around enemies, and conquer the seas in Blackbeard's Wake — a fast-paced mobile action game." />
+  <title>Blackbeard's Wake — Sail. Encircle. Conquer. | Pirate Action Mobile Game</title>
+  <meta name="description" content="Blackbeard's Wake is a fast-paced pirate action mobile game. Command your ship, draw loops around enemies to capture them, dodge cannonballs, and conquer the seas. Coming soon to iOS and Android." />
+  <meta name="keywords" content="Blackbeard's Wake, pirate game, mobile game, action game, iOS game, Android game, pirate ship, encircle enemies, sea battle, Blackbeard Games" />
+  <meta name="author" content="Blackbeard Games" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://blackbeardswake.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Blackbeard's Wake" />
-  <meta property="og:description" content="Sail. Encircle. Conquer. A fast-paced pirate action game for iOS." />
+  <meta property="og:title" content="Blackbeard's Wake — Sail. Encircle. Conquer." />
+  <meta property="og:description" content="Command your pirate ship, draw loops around enemies, and conquer the seas in Blackbeard's Wake — a fast-paced mobile action game coming soon to iOS and Android." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/og-image.png" />
+  <meta property="og:url" content="https://blackbeardswake.com/" />
+  <meta property="og:image" content="https://blackbeardswake.com/assets/og-image.png" />
+  <meta property="og:image:alt" content="Blackbeard's Wake game artwork" />
+  <meta property="og:site_name" content="Blackbeard's Wake" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blackbeard's Wake — Sail. Encircle. Conquer." />
+  <meta name="twitter:description" content="Command your pirate ship, draw loops around enemies, and conquer the seas. Coming soon to iOS and Android." />
+  <meta name="twitter:image" content="https://blackbeardswake.com/assets/og-image.png" />
+  <meta name="twitter:image:alt" content="Blackbeard's Wake game artwork" />
+
+  <!-- Structured Data: SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Blackbeard's Wake",
+    "description": "A fast-paced pirate action mobile game where you command your ship, draw loops around enemies to capture them, dodge cannonballs, and conquer the seas.",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "iOS, Android",
+    "url": "https://blackbeardswake.com/",
+    "image": "https://blackbeardswake.com/assets/og-image.png",
+    "screenshot": [
+      "https://blackbeardswake.com/assets/Screenshots/Start%20Screen.PNG",
+      "https://blackbeardswake.com/assets/Screenshots/Gameplay_01.PNG",
+      "https://blackbeardswake.com/assets/Screenshots/Gameplay_02.PNG",
+      "https://blackbeardswake.com/assets/Screenshots/Gameplay_03.PNG"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/PreOrder"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Blackbeard Games",
+      "url": "https://blackbeardswake.com/"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: WebSite (for AI search / sitelinks) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Blackbeard's Wake",
+    "url": "https://blackbeardswake.com/",
+    "description": "Official website for Blackbeard's Wake, a pirate action mobile game by Blackbeard Games.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Blackbeard Games"
+    }
+  }
+  </script>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/favicon.png" />
@@ -181,7 +242,7 @@
   </header>
 
   <!-- ============ FEATURES ============ -->
-  <section id="features" class="bg-dark py-24 relative overflow-hidden">
+  <section id="features" class="bg-dark py-24 relative overflow-hidden" aria-label="Game Features">
     <!-- Accent glow -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[2px] bg-gradient-to-r from-transparent via-flame/50 to-transparent"></div>
 
@@ -190,43 +251,43 @@
 
       <div class="grid md:grid-cols-3 gap-10">
         <!-- Feature 1 -->
-        <div class="text-center space-y-4 group">
-          <div class="w-16 h-16 mx-auto bg-dark-100 border border-cyan/20 rounded-2xl flex items-center justify-center text-3xl group-hover:border-cyan/50 group-hover:shadow-lg group-hover:shadow-cyan/10 transition-all">
+        <article class="text-center space-y-4 group">
+          <div class="w-16 h-16 mx-auto bg-dark-100 border border-cyan/20 rounded-2xl flex items-center justify-center text-3xl group-hover:border-cyan/50 group-hover:shadow-lg group-hover:shadow-cyan/10 transition-all" aria-hidden="true">
             🚢
           </div>
           <h3 class="text-xl font-semibold text-cyan">Sail the Seas</h3>
           <p class="text-white/60 leading-relaxed">
             Navigate your ship with intuitive touch controls across a vast procedural ocean filled with enemies and treasure.
           </p>
-        </div>
+        </article>
 
         <!-- Feature 2 -->
-        <div class="text-center space-y-4 group">
-          <div class="w-16 h-16 mx-auto bg-dark-100 border border-crimson/20 rounded-2xl flex items-center justify-center text-3xl group-hover:border-crimson/50 group-hover:shadow-lg group-hover:shadow-crimson/10 transition-all">
+        <article class="text-center space-y-4 group">
+          <div class="w-16 h-16 mx-auto bg-dark-100 border border-crimson/20 rounded-2xl flex items-center justify-center text-3xl group-hover:border-crimson/50 group-hover:shadow-lg group-hover:shadow-crimson/10 transition-all" aria-hidden="true">
             🌀
           </div>
           <h3 class="text-xl font-semibold text-cyan">Encircle Enemies</h3>
           <p class="text-white/60 leading-relaxed">
             Draw loops around enemy ships and sea creatures with your trail to capture them. Bigger loops, bigger rewards.
           </p>
-        </div>
+        </article>
 
         <!-- Feature 3 -->
-        <div class="text-center space-y-4 group">
-          <div class="w-16 h-16 mx-auto bg-dark-100 border border-flame/20 rounded-2xl flex items-center justify-center text-3xl group-hover:border-flame/50 group-hover:shadow-lg group-hover:shadow-flame/10 transition-all">
+        <article class="text-center space-y-4 group">
+          <div class="w-16 h-16 mx-auto bg-dark-100 border border-flame/20 rounded-2xl flex items-center justify-center text-3xl group-hover:border-flame/50 group-hover:shadow-lg group-hover:shadow-flame/10 transition-all" aria-hidden="true">
             ⚔️
           </div>
           <h3 class="text-xl font-semibold text-cyan">Grow & Conquer</h3>
           <p class="text-white/60 leading-relaxed">
             Level up through phases, upgrade your ship, and beat your own high score. How long can you survive?
           </p>
-        </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- ============ SCREENSHOTS ============ -->
-  <section id="screenshots" class="bg-section-alt py-24">
+  <section id="screenshots" class="bg-section-alt py-24" aria-label="Game Screenshots">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="font-display text-4xl md:text-5xl text-flame text-center mb-16 glow-flame">Screenshots</h2>
 
@@ -308,9 +369,9 @@
   </section>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="bg-dark border-t border-white/5 py-10">
+  <footer class="bg-dark border-t border-white/5 py-10" role="contentinfo">
     <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
-      <p>&copy; 2026 Blackbeard's Wake. All rights reserved.</p>
+      <p>&copy; 2026 Blackbeard Games. All rights reserved.</p>
       <div class="flex gap-6">
         <a href="privacy-policy.html" class="hover:text-cyan transition-colors">Privacy Policy</a>
         <a href="support.html" class="hover:text-cyan transition-colors">Support</a>
