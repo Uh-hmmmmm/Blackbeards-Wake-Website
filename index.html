@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1684303192288140');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Meta Pixel Code -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blackbeard's Wake — Sail. Encircle. Conquer. | Pirate Action Mobile Game</title>
@@ -150,6 +164,11 @@
 </head>
 
 <body class="bg-dark text-white font-body antialiased">
+  <!-- Meta Pixel Code (noscript) -->
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1684303192288140&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code (noscript) -->
 
   <!-- ============ NAV ============ -->
   <nav class="fixed top-0 w-full z-50 bg-dark/85 backdrop-blur-md border-b border-white/5">
@@ -159,7 +178,8 @@
       <!-- Desktop links -->
       <div class="hidden md:flex items-center gap-6 text-sm font-medium">
         <a href="#features" class="text-white/70 hover:text-cyan transition-colors">Features</a>
-        <a href="#screenshots" class="text-white/70 hover:text-cyan transition-colors">Screenshots</a>
+          <a href="#screenshots" class="text-white/70 hover:text-cyan transition-colors">Gallery</a>
+        <a href="support.html" class="text-white/70 hover:text-cyan transition-colors">Support</a>
         <!--
         <a href="#download" class="bg-flame text-white px-5 py-2 rounded-full font-semibold hover:bg-flame-100 transition-colors shadow-lg shadow-flame/25">
           Download
@@ -179,7 +199,8 @@
     <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 bg-dark/95 backdrop-blur-md">
       <div class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
         <a href="#features" class="text-white/70 hover:text-cyan transition-colors mobile-nav-link">Features</a>
-        <a href="#screenshots" class="text-white/70 hover:text-cyan transition-colors mobile-nav-link">Screenshots</a>
+        <a href="#screenshots" class="text-white/70 hover:text-cyan transition-colors mobile-nav-link">Gallery</a>
+        <a href="support.html" class="text-white/70 hover:text-cyan transition-colors mobile-nav-link">Support</a>
         <!--
         <a href="#download" class="bg-flame text-white px-5 py-2 rounded-full font-semibold text-center hover:bg-flame-100 transition-colors shadow-lg shadow-flame/25 mobile-nav-link">
           Download
@@ -209,7 +230,7 @@
           <!-- Coming Soon badge -->
           <div class="inline-flex items-center gap-2 bg-flame/15 border border-flame/30 text-flame px-6 py-3 rounded-full font-semibold text-lg shadow-lg shadow-flame/10">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            Coming Soon!
+            Coming March 26th!
           </div>
           <!--
           <a href="#" id="appstore-link" class="inline-block hover:opacity-90 transition-opacity">
@@ -286,22 +307,22 @@
     </div>
   </section>
 
-  <!-- ============ SCREENSHOTS ============ -->
-  <section id="screenshots" class="bg-section-alt py-24" aria-label="Game Screenshots">
+  <!-- ============ GALLERY ============ -->
+  <section id="screenshots" class="bg-section-alt py-24" aria-label="Game Gallery">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="font-display text-4xl md:text-5xl text-flame text-center mb-16 glow-flame">Screenshots</h2>
+      <h2 class="font-display text-4xl md:text-5xl text-flame text-center mb-16 glow-flame">Gallery</h2>
 
       <!-- Carousel wrapper -->
       <div class="relative">
         <!-- Carousel track -->
         <div id="carousel" class="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 scrollbar-hide">
-          <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="0"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Screenshots/Start Screen.PNG" alt="Start Screen" class="w-full h-full object-cover" /></div></div>
-          <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="1"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Screenshots/Gameplay_01.PNG" alt="Gameplay 1" class="w-full h-full object-cover" /></div></div>
-          <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="2"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Screenshots/Gameplay_02.PNG" alt="Gameplay 2" class="w-full h-full object-cover" /></div></div>
-          <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="3"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Screenshots/Gameplay_03.PNG" alt="Gameplay 3" class="w-full h-full object-cover" /></div></div>
-          <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="4"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Screenshots/Gameplay_04.PNG" alt="Gameplay 4" class="w-full h-full object-cover" /></div></div>
-          <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="5"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Screenshots/Gameplay_05.PNG" alt="Gameplay 5" class="w-full h-full object-cover" /></div></div>
-          <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="6"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Screenshots/Top Scores.PNG" alt="Top Scores" class="w-full h-full object-cover" /></div></div>
+           <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="0"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Marketing Images/01_Circle.png" alt="Circle" class="w-full h-full object-cover" /></div></div>
+           <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="1"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Marketing Images/02_Grow.png" alt="Grow" class="w-full h-full object-cover" /></div></div>
+           <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="2"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Marketing Images/03_Cannons.png" alt="Cannons" class="w-full h-full object-cover" /></div></div>
+           <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="3"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Marketing Images/04_World.png" alt="World" class="w-full h-full object-cover" /></div></div>
+           <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="4"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Marketing Images/05_Legend.png" alt="Legend" class="w-full h-full object-cover" /></div></div>
+           <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="5"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Marketing Images/IMG_4599.PNG" alt="Marketing image 4599" class="w-full h-full object-cover" /></div></div>
+           <div class="snap-center shrink-0 w-48 md:w-56 cursor-pointer screenshot-thumb" data-index="6"><div class="aspect-[9/19.5] bg-dark-100 rounded-2xl border border-white/5 overflow-hidden hover:border-cyan/30 hover:scale-105 transition-all"><img src="assets/Marketing Images/IMG_4676.PNG" alt="Marketing image 4676" class="w-full h-full object-cover" /></div></div>
         </div>
 
         <!-- Prev / Next buttons -->
@@ -346,7 +367,7 @@
         <!-- Coming Soon badge -->
         <div class="inline-flex items-center gap-2 bg-flame/15 border border-flame/30 text-flame px-8 py-4 rounded-full font-semibold text-xl shadow-lg shadow-flame/10">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Coming Soon!
+          Coming March 26th!
         </div>
         <!--
         <a href="#" class="inline-block hover:opacity-90 transition-opacity">
@@ -394,15 +415,15 @@
   </footer>
 
   <script>
-    // --- Screenshot data ---
+    // --- Gallery data ---
     const screenshots = [
-      { src: 'assets/Screenshots/Start Screen.PNG', alt: 'Start Screen' },
-      { src: 'assets/Screenshots/Gameplay_01.PNG', alt: 'Gameplay 1' },
-      { src: 'assets/Screenshots/Gameplay_02.PNG', alt: 'Gameplay 2' },
-      { src: 'assets/Screenshots/Gameplay_03.PNG', alt: 'Gameplay 3' },
-      { src: 'assets/Screenshots/Gameplay_04.PNG', alt: 'Gameplay 4' },
-      { src: 'assets/Screenshots/Gameplay_05.PNG', alt: 'Gameplay 5' },
-      { src: 'assets/Screenshots/Top Scores.PNG', alt: 'Top Scores' },
+      { src: 'assets/Marketing Images/01_Circle.png', alt: 'Circle' },
+      { src: 'assets/Marketing Images/02_Grow.png', alt: 'Grow' },
+      { src: 'assets/Marketing Images/03_Cannons.png', alt: 'Cannons' },
+      { src: 'assets/Marketing Images/04_World.png', alt: 'World' },
+      { src: 'assets/Marketing Images/05_Legend.png', alt: 'Legend' },
+      { src: 'assets/Marketing Images/IMG_4599.PNG', alt: 'Marketing image 4599' },
+      { src: 'assets/Marketing Images/IMG_4676.PNG', alt: 'Marketing image 4676' },
     ];
     let lightboxIndex = 0;
 
