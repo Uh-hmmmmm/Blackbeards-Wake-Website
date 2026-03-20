@@ -254,8 +254,19 @@
       <!-- Phone mockup side -->
       <div class="flex justify-center md:justify-end">
         <div class="animate-float">
-          <div class="w-64 h-[520px] bg-dark-100 rounded-[2.5rem] border-2 border-cyan/30 shadow-2xl glow-cyan overflow-hidden">
-            <img src="assets/Screenshots/Gameplay_01.PNG" alt="Gameplay" class="w-full h-full object-cover" />
+          <div class="w-72 h-[585px] md:w-80 md:h-[650px] bg-dark-100 rounded-[2.5rem] border-2 border-cyan/30 shadow-2xl glow-cyan overflow-hidden">
+              <video
+                class="w-full h-full object-cover"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="metadata"
+                poster="assets/Screenshots/Gameplay_01.PNG"
+                aria-label="Blackbeard's Wake gameplay preview"
+              >
+                <source src="assets/Videos/GameplayLoop.mp4" type="video/mp4" />
+              </video>
           </div>
         </div>
       </div>
