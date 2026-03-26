@@ -18,7 +18,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blackbeard's Wake — Sail. Encircle. Conquer. | Pirate Action Mobile Game</title>
-  <meta name="description" content="Blackbeard's Wake is a fast-paced pirate action mobile game. Command your ship, draw loops around enemies to capture them, dodge cannonballs, and conquer the seas. Coming soon to iOS and Android." />
+  <meta name="description" content="Blackbeard's Wake is a fast-paced pirate action mobile game. Command your ship, draw loops around enemies to capture them, dodge cannonballs, and conquer the seas. Play for free now on mobile." />
   <meta name="keywords" content="Blackbeard's Wake, pirate game, mobile game, action game, iOS game, Android game, pirate ship, encircle enemies, sea battle, Blackbeard Games" />
   <meta name="author" content="Blackbeard Games" />
   <meta name="robots" content="index, follow" />
@@ -26,7 +26,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Blackbeard's Wake — Sail. Encircle. Conquer." />
-  <meta property="og:description" content="Command your pirate ship, draw loops around enemies, and conquer the seas in Blackbeard's Wake — a fast-paced mobile action game coming soon to iOS and Android." />
+  <meta property="og:description" content="Command your pirate ship, draw loops around enemies, and conquer the seas in Blackbeard's Wake — a fast-paced mobile action game. Play for free now." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://blackbeardswake.com/" />
   <meta property="og:image" content="https://blackbeardswake.com/assets/og-image.png" />
@@ -37,9 +37,10 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Blackbeard's Wake — Sail. Encircle. Conquer." />
-  <meta name="twitter:description" content="Command your pirate ship, draw loops around enemies, and conquer the seas. Coming soon to iOS and Android." />
+  <meta name="twitter:description" content="Command your pirate ship, draw loops around enemies, and conquer the seas. Play for free now." />
   <meta name="twitter:image" content="https://blackbeardswake.com/assets/og-image.png" />
   <meta name="twitter:image:alt" content="Blackbeard's Wake game artwork" />
+  <meta name="apple-itunes-app" content="app-id=6759919373, app-argument=https://apps.apple.com/us/app/blackbeards-wake/id6759919373" />
 
   <!-- Structured Data: SoftwareApplication -->
   <script type="application/ld+json">
@@ -62,7 +63,7 @@
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD",
-      "availability": "https://schema.org/PreOrder"
+      "availability": "https://schema.org/InStock"
     },
     "author": {
       "@type": "Organization",
@@ -150,7 +151,7 @@
       50%      { transform: translateY(-14px) rotate(1deg); }
     }
     .animate-float { animation: float 4s ease-in-out infinite; }
-    /* Subtle pulse for Coming Soon badges */
+    /* Subtle pulse utility */
     @keyframes subtle-pulse {
       0%, 100% { opacity: 1; }
       50%      { opacity: 0.8; }
@@ -226,40 +227,28 @@
           Command your pirate ship through treacherous waters. Draw loops around enemies to capture them, 
           dodge cannonballs, and grow your little boat to gargantuan proportions across ever-changing seas.
         </p>
-        <div class="pt-2 space-y-4">
-          <div class="flex flex-wrap gap-4">
-            <a href="https://www.instagram.com/blackbeard.world/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-flame text-white px-6 py-3 rounded-full font-semibold text-base hover:bg-flame-100 transition-colors shadow-lg shadow-flame/25">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm8.95 1.75a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/></svg>
-              Follow on Instagram
+        <div class="pt-3 space-y-5">
+          <div>
+            <p class="inline-flex items-center rounded-full border border-flame/30 bg-flame/10 px-5 py-2 font-display text-2xl md:text-3xl leading-none text-flame glow-flame shadow-lg shadow-flame/10">
+              Play for Free Now
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-4">
+            <a href="#" id="appstore-link" class="inline-block hover:opacity-90 transition-opacity" aria-label="Open Blackbeard's Wake on the App Store">
+              <img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                class="h-14"
+              />
             </a>
-            <a href="#screenshots" class="inline-flex items-center gap-3 border border-cyan/40 bg-cyan/10 text-cyan px-6 py-3 rounded-full font-semibold text-base hover:bg-cyan/15 transition-colors">
-              See Screenshots
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            <a href="#" id="playstore-link" class="inline-block hover:opacity-90 transition-opacity" aria-label="Open Blackbeard's Wake on Google Play">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play"
+                class="h-14"
+              />
             </a>
           </div>
-          <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-white/55">
-            <span class="inline-flex items-center gap-2 text-flame font-semibold uppercase tracking-[0.2em]">
-              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              Launches March 26
-            </span>
-            <span>Follow for launch updates, clips, and release reminders.</span>
-          </div>
-          <!--
-          <a href="#" id="appstore-link" class="inline-block hover:opacity-90 transition-opacity">
-            <img
-              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-              alt="Download on the App Store"
-              class="h-14"
-            />
-          </a>
-          <a href="#" id="playstore-link" class="inline-block hover:opacity-90 transition-opacity">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-              alt="Get it on Google Play"
-              class="h-14"
-            />
-          </a>
-          -->
         </div>
       </div>
 
@@ -387,27 +376,20 @@
       <h2 class="font-display text-4xl md:text-5xl text-flame glow-flame">Ready to Set Sail?</h2>
       <p class="text-white/70 text-lg">Free to play. No account required. Just pure pirate action.</p>
       <div class="flex flex-wrap justify-center gap-4">
-        <!-- Coming Soon badge -->
-        <div class="inline-flex items-center gap-2 bg-flame/15 border border-flame/30 text-flame px-8 py-4 rounded-full font-semibold text-xl shadow-lg shadow-flame/10">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-          Coming March 26th!
-        </div>
-        <!--
-        <a href="#" class="inline-block hover:opacity-90 transition-opacity">
+        <a href="#" id="appstore-link-footer" class="inline-block hover:opacity-90 transition-opacity" aria-label="Open Blackbeard's Wake on the App Store">
           <img
             src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
             alt="Download on the App Store"
             class="h-16"
           />
         </a>
-        <a href="#" class="inline-block hover:opacity-90 transition-opacity">
+        <a href="#" id="playstore-link-footer" class="inline-block hover:opacity-90 transition-opacity" aria-label="Open Blackbeard's Wake on Google Play">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
             alt="Get it on Google Play"
             class="h-16"
           />
         </a>
-        -->
       </div>
     </div>
   </section>
@@ -423,6 +405,9 @@
         Explore more projects &amp; updates at
         <a href="https://blackbeard.world/" target="_blank" rel="noopener noreferrer" class="text-cyan hover:text-cyan-100 underline underline-offset-2 transition-colors">blackbeard.world</a>
       </p>
+      <a href="https://www.instagram.com/blackbeard.world/" target="_blank" rel="noopener noreferrer" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/70 hover:border-cyan/40 hover:bg-cyan/10 hover:text-cyan transition-all" aria-label="Follow Blackbeard World on Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm8.95 1.75a1.05 1.05 0 1 1 0 2.1 1.05 1.05 0 0 1 0-2.1ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/></svg>
+      </a>
     </div>
   </section>
 
@@ -438,6 +423,39 @@
   </footer>
 
   <script>
+    const STORE_LINKS = {
+      ios: 'https://apps.apple.com/us/app/blackbeards-wake/id6759919373',
+      android: 'https://play.google.com/store/apps/details?id=com.bbw.blackbeardswake',
+      iosAppId: '6759919373'
+    };
+
+    document.querySelector('meta[name="apple-itunes-app"]')?.setAttribute(
+      'content',
+      `app-id=${STORE_LINKS.iosAppId}, app-argument=${STORE_LINKS.ios}`
+    );
+
+    [
+      'appstore-link',
+      'appstore-link-footer'
+    ].forEach(id => {
+      const link = document.getElementById(id);
+      if (!link) return;
+      link.href = STORE_LINKS.ios;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    });
+
+    [
+      'playstore-link',
+      'playstore-link-footer'
+    ].forEach(id => {
+      const link = document.getElementById(id);
+      if (!link) return;
+      link.href = STORE_LINKS.android;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    });
+
     // --- Gallery data ---
     const screenshots = [
       { src: 'assets/Marketing Images/01_Circle.png', alt: 'Circle' },
