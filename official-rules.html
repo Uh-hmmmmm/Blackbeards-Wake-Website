@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Official Contest Rules — Blackbeard's Wake</title>
+  <meta name="description" content="Official rules for the Blackbeard's Wake weekly leaderboard contest: eligibility, prizes, fair play, governing law, and contact information." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://blackbeardswake.com/official-rules.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Official Contest Rules — Blackbeard's Wake" />
+  <meta property="og:description" content="The full official rules for the Blackbeard's Wake weekly leaderboard contest." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://blackbeardswake.com/official-rules.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark:   { DEFAULT: '#0a0a12', 100: '#12121e', 200: '#1a1a2e' },
+            crimson:{ DEFAULT: '#DF2B41', 100: '#ff3d57', 200: '#b82235', 300: '#8a1928' },
+            cyan:   { DEFAULT: '#18D6FF', 100: '#a5efff', 200: '#5be3ff', 300: '#0fb8db', 400: '#0a8ea8' },
+            flame:  { DEFAULT: '#FF4F18', 100: '#ff7a50', 200: '#e6430f', 300: '#cc3a0d' },
+            royal:  { DEFAULT: '#0F38D9', 100: '#3a5ce6', 200: '#0b2cb0', 300: '#081f80' },
+          },
+          fontFamily: {
+            display:  ['"Good Brush"', 'cursive'],
+            callout:  ['"Berkshire Swash"', 'cursive'],
+            body:     ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Google Fonts (body only) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    @font-face {
+      font-family: 'Good Brush';
+      src: local('Good Brush'), url('assets/Good%20Brush.ttf') format('truetype');
+      font-weight: normal; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Berkshire Swash';
+      src: local('Berkshire Swash'), url('assets/BERKSHIRESWASH-REGULAR.TTF') format('truetype');
+      font-weight: normal; font-style: normal; font-display: swap;
+    }
+    .bg-hero-gradient {
+      background: linear-gradient(160deg, #0a0a12 0%, #12121e 30%, #1a1a2e 50%, #DF2B41 150%);
+    }
+    .glow-flame { text-shadow: 0 0 40px rgba(255,79,24,0.35), 0 0 80px rgba(255,79,24,0.15); }
+    .slash-divider {
+      background: linear-gradient(170deg, transparent 48%, #DF2B41 48%, #DF2B41 52%, transparent 52%);
+    }
+
+    /* Rules document typography */
+    .rules-doc h2 {
+      font-family: 'Good Brush', cursive;
+      font-size: 2rem;
+      line-height: 1.1;
+      color: #FF4F18;
+      text-shadow: 0 0 24px rgba(255,79,24,0.25);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+    .rules-doc h3 {
+      font-family: 'Berkshire Swash', cursive;
+      font-size: 1.25rem;
+      color: #18D6FF;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .rules-doc p { color: rgba(255,255,255,0.75); line-height: 1.7; margin: 0.75rem 0; }
+    .rules-doc strong { color: #fff; font-weight: 600; }
+    .rules-doc ul { list-style: none; padding-left: 0; margin: 0.75rem 0; }
+    .rules-doc ul li {
+      position: relative;
+      padding-left: 1.5rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+      margin: 0.4rem 0;
+    }
+    .rules-doc ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: #18D6FF;
+      font-weight: 700;
+    }
+    .rules-doc hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.12), transparent);
+      margin: 2.5rem 0;
+    }
+    .rules-doc a {
+      color: #18D6FF;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .rules-doc a:hover { color: #5be3ff; }
+    .rules-doc .lead-banner {
+      display: inline-block;
+      border: 1px solid rgba(255,79,24,0.3);
+      background: rgba(255,79,24,0.08);
+      color: #FF4F18;
+      padding: 0.75rem 1.25rem;
+      border-radius: 9999px;
+      font-family: 'Berkshire Swash', cursive;
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+      text-shadow: 0 0 24px rgba(255,79,24,0.25);
+    }
+  </style>
+</head>
+
+<body class="bg-dark text-white font-body antialiased">
+
+  <!-- ============ NAV ============ -->
+  <nav class="fixed top-0 w-full z-50 bg-dark/85 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="font-display text-2xl text-flame tracking-wide">Blackbeard's Wake</a>
+
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="contest.html" class="text-white/70 hover:text-cyan transition-colors">Weekly Contest</a>
+        <a href="support.html" class="text-white/70 hover:text-cyan transition-colors">Support</a>
+        <a href="#" id="discord-link-nav" class="inline-flex items-center gap-2 bg-flame/10 border border-flame/30 text-flame px-4 py-1.5 rounded-full font-semibold hover:bg-flame/20 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3.2a.074.074 0 0 0-.079.037c-.34.607-.719 1.4-.984 2.022a18.27 18.27 0 0 0-5.487 0 12.65 12.65 0 0 0-1-2.022.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 5.169 4.37a.07.07 0 0 0-.032.027C2.388 8.523 1.659 12.553 2.02 16.533a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.041-.105 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.041.106c.36.698.772 1.362 1.226 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-4.602-.838-8.6-3.549-12.137a.06.06 0 0 0-.031-.028ZM8.02 14.114c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418Zm7.974 0c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>
+          Discord
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 -mr-2" aria-label="Toggle menu">
+        <span class="block w-6 h-0.5 bg-white/70 transition-all origin-center"></span>
+        <span class="block w-6 h-0.5 bg-white/70 transition-all"></span>
+        <span class="block w-6 h-0.5 bg-white/70 transition-all origin-center"></span>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 bg-dark/95 backdrop-blur-md">
+      <div class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
+        <a href="contest.html" class="text-white/70 hover:text-cyan transition-colors mobile-nav-link">Weekly Contest</a>
+        <a href="support.html" class="text-white/70 hover:text-cyan transition-colors mobile-nav-link">Support</a>
+        <a href="#" id="discord-link-nav-mobile" class="inline-flex items-center justify-center gap-2 bg-flame/10 border border-flame/30 text-flame px-4 py-2 rounded-full font-semibold hover:bg-flame/20 transition-colors mobile-nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3.2a.074.074 0 0 0-.079.037c-.34.607-.719 1.4-.984 2.022a18.27 18.27 0 0 0-5.487 0 12.65 12.65 0 0 0-1-2.022.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 5.169 4.37a.07.07 0 0 0-.032.027C2.388 8.523 1.659 12.553 2.02 16.533a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.041-.105 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.041.106c.36.698.772 1.362 1.226 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-4.602-.838-8.6-3.549-12.137a.06.06 0 0 0-.031-.028ZM8.02 14.114c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418Zm7.974 0c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>
+          Join the Discord
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HEADER ============ -->
+  <header class="relative pt-32 pb-14 overflow-hidden bg-hero-gradient">
+    <div class="absolute inset-0 slash-divider opacity-5 pointer-events-none"></div>
+    <div class="max-w-3xl mx-auto px-6 relative z-10 text-center space-y-4">
+      <p class="font-callout text-lg text-cyan tracking-wide">Blackbeard's Wake Leaderboard Contest</p>
+      <h1 class="font-display text-5xl md:text-6xl text-flame glow-flame leading-none">Official Rules</h1>
+      <p class="text-white/60 text-sm">Last updated: 5/26/2026</p>
+    </div>
+  </header>
+
+  <!-- ============ RULES CONTENT ============ -->
+  <main class="bg-dark py-16">
+    <article class="max-w-3xl mx-auto px-6 rules-doc">
+
+      <p class="lead-banner">No purchase necessary to enter or win. A purchase does not increase your chances of winning.</p>
+
+      <h2>1. Sponsor</h2>
+      <p>The Blackbeard's Wake Leaderboard Contest (the "Contest") is sponsored by <strong>Blackbeard World LLC</strong> ("Sponsor").</p>
+
+      <hr />
+
+      <h2>2. Eligibility</h2>
+      <p>The Contest is open only to legal residents of the <strong>United States</strong> who are <strong>18 years of age or older</strong> at the time of entry.</p>
+      <p>Employees, officers, and directors of Sponsor, and their immediate family members or members of the same household, are not eligible to participate.</p>
+      <p>Void where prohibited by law.</p>
+
+      <hr />
+
+      <h2>3. Contest Period</h2>
+      <p>The Contest consists of recurring <strong>weekly</strong> leaderboard competitions:</p>
+      <ul>
+        <li>Each Contest Period begins <strong>Monday at 12:00 AM CST</strong> and ends the following <strong>Sunday at 11:59 PM CST</strong>.</li>
+      </ul>
+      <p>Sponsor's system time shall be the official timekeeping method.</p>
+
+      <hr />
+
+      <h2>4. How to Enter</h2>
+      <p>Participants may enter by downloading and playing <strong>Blackbeard's Wake</strong> and achieving a score during the applicable Contest Period.</p>
+      <ul>
+        <li>Scores are automatically recorded via the game's leaderboard system.</li>
+        <li>Each participant's <strong>highest score</strong> during the Contest Period will be used for ranking.</li>
+        <li>Participants may play an <strong>unlimited number of times</strong> during the Contest Period.</li>
+        <li>No purchase is required to participate.</li>
+        <li>Optional purchases (including ad removal) <strong>do not provide any gameplay or scoring advantage</strong>.</li>
+      </ul>
+
+      <hr />
+
+      <h2>5. Winner Determination</h2>
+      <p>Winners are determined based on the <strong>highest verified scores</strong> achieved during the Contest Period.</p>
+      <p>Each participant may win <strong>only one prize per Contest Period</strong>. If a participant achieves multiple qualifying scores, only their highest-ranking position will be awarded, and the next eligible participant will move up in ranking.</p>
+
+      <h3>Weekly Prizes</h3>
+      <ul>
+        <li>1st Place: <strong>$100</strong></li>
+        <li>2nd Place: <strong>$50</strong></li>
+        <li>3rd Place: <strong>$25</strong></li>
+      </ul>
+
+      <h3>Tie-Breaker</h3>
+      <p>In the event of a tie, the participant who achieved the tied score <strong>earliest</strong> during the Contest Period will receive the higher ranking.</p>
+      <p>All results are subject to verification by Sponsor. Sponsor can invalidate any score for any reason.</p>
+
+      <hr />
+
+      <h2>6. Winner Notification</h2>
+      <p>Potential winners will be contacted via the email address associated with their account within a reasonable time after the end of the Contest Period.</p>
+      <p>To claim a prize, winners must:</p>
+      <ul>
+        <li>Respond within <strong>7 days</strong> of the initial notification.</li>
+        <li>Provide any required information for prize fulfillment.</li>
+      </ul>
+      <p>If a winner does not respond within the required timeframe, is found ineligible, or fails to comply with these Official Rules, the prize may be forfeited and awarded to an alternate winner.</p>
+
+      <hr />
+
+      <h2>7. Prizes &amp; Payment</h2>
+      <p>Prizes will be awarded via <strong>Tremendous</strong> or another payout method selected by Sponsor.</p>
+      <ul>
+        <li>Prizes are non-transferable and cannot be exchanged or substituted except at Sponsor's discretion.</li>
+        <li>Sponsor reserves the right to substitute a prize of equal or greater value if necessary.</li>
+      </ul>
+
+      <hr />
+
+      <h2>8. Taxes</h2>
+      <p>Winners are solely responsible for any applicable federal, state, or local taxes.</p>
+      <p>If required by law, Sponsor may request tax documentation (such as a W-9) prior to issuing payment.</p>
+
+      <hr />
+
+      <h2>9. Fair Play &amp; Disqualification</h2>
+      <p>This Contest is intended to reward skill-based gameplay.</p>
+      <p>Sponsor reserves the right to disqualify any participant who:</p>
+      <ul>
+        <li>Cheats or attempts to manipulate gameplay or scoring.</li>
+        <li>Uses bots, automation, or unauthorized third-party tools.</li>
+        <li>Exploits bugs, glitches, or unintended mechanics.</li>
+        <li>Attempts to interfere with the integrity of the Contest.</li>
+        <li>Provides false or misleading information.</li>
+      </ul>
+      <p>Sponsor may review gameplay data and invalidate scores that are deemed suspicious or unverifiable.</p>
+
+      <hr />
+
+      <h2>10. Limitation of Liability</h2>
+      <p>By participating, entrants agree to release and hold harmless Sponsor from any liability arising from participation in the Contest or acceptance, use, or misuse of any prize.</p>
+      <p>Sponsor is not responsible for:</p>
+      <ul>
+        <li>Technical failures, server issues, or interruptions.</li>
+        <li>Errors in score tracking, leaderboard display, or data transmission.</li>
+        <li>Lost, late, or misdirected communications.</li>
+      </ul>
+
+      <hr />
+
+      <h2>11. Privacy</h2>
+      <p>Information collected from participants will be used for the purposes of administering the Contest and awarding prizes.</p>
+      <p>A <a href="privacy-policy.html">Privacy Policy</a> will be made available prior to or at the time of account registration.</p>
+
+      <hr />
+
+      <h2>12. General Conditions</h2>
+      <p>Sponsor reserves the right to modify, suspend, or terminate the Contest at any time for any reason, including if the Contest cannot be conducted as planned due to technical issues, fraud, or other causes beyond Sponsor's control.</p>
+      <p>Sponsor reserves the right to make changes to these Official Rules at any time. Continued participation constitutes acceptance of any updates.</p>
+      <p>All decisions by Sponsor are final and binding.</p>
+
+      <hr />
+
+      <h2>13. Governing Law</h2>
+      <p>The Contest is governed by the laws of the State of <strong>Tennessee</strong>, without regard to conflict of law principles.</p>
+
+      <hr />
+
+      <h2>14. Contact</h2>
+      <p>For questions regarding the Contest, contact: <a href="mailto:support@blackbeard.world">support@blackbeard.world</a></p>
+
+    </article>
+
+    <!-- Back to Contest CTA -->
+    <div class="max-w-3xl mx-auto px-6 mt-16 text-center">
+      <a href="contest.html" class="inline-flex items-center gap-2 bg-flame text-white px-7 py-3 rounded-full font-semibold hover:bg-flame-100 transition-colors shadow-lg shadow-flame/25">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+        Back to the Weekly Contest
+      </a>
+    </div>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-dark border-t border-white/5 py-10" role="contentinfo">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
+      <p>&copy; 2026 Blackbeard Games. All rights reserved.</p>
+      <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
+        <a href="index.html" class="hover:text-cyan transition-colors">Home</a>
+        <a href="contest.html" class="hover:text-cyan transition-colors">Weekly Contest</a>
+        <a href="contest-terms.html" class="hover:text-cyan transition-colors">Contest Terms</a>
+        <a href="privacy-policy.html" class="hover:text-cyan transition-colors">Privacy Policy</a>
+        <a href="support.html" class="hover:text-cyan transition-colors">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const STORE_LINKS = { discord: 'https://discord.gg/X53Ecc9TWH' };
+    ['discord-link-nav', 'discord-link-nav-mobile'].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.href = STORE_LINKS.discord;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    });
+
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    menuBtn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-nav-link').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+  </script>
+</body>
+</html>

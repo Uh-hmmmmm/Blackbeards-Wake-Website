@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weekly Cash Contest — Blackbeard's Wake</title>
+  <meta name="description" content="Compete on the Blackbeard's Wake leaderboard for real cash prizes. Live weekly countdown, prize breakdown, and the official rules." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://blackbeardswake.com/contest.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Weekly Cash Contest — Blackbeard's Wake" />
+  <meta property="og:description" content="Top the leaderboard, win real cash. See current prizes, live countdowns, and the official contest rules." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://blackbeardswake.com/contest.html" />
+  <meta property="og:image" content="https://blackbeardswake.com/assets/og-image.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            dark:   { DEFAULT: '#0a0a12', 100: '#12121e', 200: '#1a1a2e' },
+            crimson:{ DEFAULT: '#DF2B41', 100: '#ff3d57', 200: '#b82235', 300: '#8a1928' },
+            cyan:   { DEFAULT: '#18D6FF', 100: '#a5efff', 200: '#5be3ff', 300: '#0fb8db', 400: '#0a8ea8' },
+            flame:  { DEFAULT: '#FF4F18', 100: '#ff7a50', 200: '#e6430f', 300: '#cc3a0d' },
+            royal:  { DEFAULT: '#0F38D9', 100: '#3a5ce6', 200: '#0b2cb0', 300: '#081f80' },
+          },
+          fontFamily: {
+            display:  ['"Good Brush"', 'cursive'],
+            callout:  ['"Berkshire Swash"', 'cursive'],
+            body:     ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Google Fonts (body only) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    @font-face {
+      font-family: 'Good Brush';
+      src: local('Good Brush'), url('assets/Good%20Brush.ttf') format('truetype');
+      font-weight: normal; font-style: normal; font-display: swap;
+    }
+    @font-face {
+      font-family: 'Berkshire Swash';
+      src: local('Berkshire Swash'), url('assets/BERKSHIRESWASH-REGULAR.TTF') format('truetype');
+      font-weight: normal; font-style: normal; font-display: swap;
+    }
+    .bg-hero-gradient {
+      background: linear-gradient(160deg, #0a0a12 0%, #12121e 30%, #1a1a2e 50%, #DF2B41 150%);
+    }
+    .bg-cta-gradient {
+      background: linear-gradient(135deg, #0a0a12 0%, #0F38D9 60%, #18D6FF 140%);
+    }
+    .bg-section-alt {
+      background: linear-gradient(180deg, #12121e 0%, #0a0a12 100%);
+    }
+    .slash-divider {
+      background: linear-gradient(170deg, transparent 48%, #DF2B41 48%, #DF2B41 52%, transparent 52%);
+    }
+    .glow-flame { text-shadow: 0 0 40px rgba(255,79,24,0.35), 0 0 80px rgba(255,79,24,0.15); }
+    .glow-cyan  { box-shadow: 0 0 30px rgba(24,214,255,0.2), 0 0 60px rgba(24,214,255,0.08); }
+    .glow-cyan-text { text-shadow: 0 0 24px rgba(24,214,255,0.35); }
+    @keyframes subtle-pulse {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.8; }
+    }
+    .animate-subtle-pulse { animation: subtle-pulse 3s ease-in-out infinite; }
+    /* Tabular numbers for the countdown so digits don't jitter */
+    .tabular-nums { font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+
+<body class="bg-dark text-white font-body antialiased">
+
+  <!-- ============ NAV ============ -->
+  <nav class="fixed top-0 w-full z-50 bg-dark/85 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+      <a href="index.html" class="font-display text-2xl text-flame tracking-wide">Blackbeard's Wake</a>
+
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="contest.html" class="text-cyan transition-colors">Weekly Contest</a>
+        <a href="support.html" class="text-white/70 hover:text-cyan transition-colors">Support</a>
+        <a href="#" id="discord-link-nav" class="inline-flex items-center gap-2 bg-flame/10 border border-flame/30 text-flame px-4 py-1.5 rounded-full font-semibold hover:bg-flame/20 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3.2a.074.074 0 0 0-.079.037c-.34.607-.719 1.4-.984 2.022a18.27 18.27 0 0 0-5.487 0 12.65 12.65 0 0 0-1-2.022.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 5.169 4.37a.07.07 0 0 0-.032.027C2.388 8.523 1.659 12.553 2.02 16.533a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.041-.105 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.041.106c.36.698.772 1.362 1.226 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-4.602-.838-8.6-3.549-12.137a.06.06 0 0 0-.031-.028ZM8.02 14.114c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418Zm7.974 0c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>
+          Discord
+        </a>
+      </div>
+
+      <button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2 -mr-2" aria-label="Toggle menu">
+        <span class="block w-6 h-0.5 bg-white/70 transition-all origin-center" id="hamburger-top"></span>
+        <span class="block w-6 h-0.5 bg-white/70 transition-all" id="hamburger-mid"></span>
+        <span class="block w-6 h-0.5 bg-white/70 transition-all origin-center" id="hamburger-bot"></span>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden border-t border-white/5 bg-dark/95 backdrop-blur-md">
+      <div class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
+        <a href="contest.html" class="text-cyan transition-colors mobile-nav-link">Weekly Contest</a>
+        <a href="support.html" class="text-white/70 hover:text-cyan transition-colors mobile-nav-link">Support</a>
+        <a href="#" id="discord-link-nav-mobile" class="inline-flex items-center justify-center gap-2 bg-flame/10 border border-flame/30 text-flame px-4 py-2 rounded-full font-semibold hover:bg-flame/20 transition-colors mobile-nav-link">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.317 4.369A19.79 19.79 0 0 0 16.558 3.2a.074.074 0 0 0-.079.037c-.34.607-.719 1.4-.984 2.022a18.27 18.27 0 0 0-5.487 0 12.65 12.65 0 0 0-1-2.022.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 5.169 4.37a.07.07 0 0 0-.032.027C2.388 8.523 1.659 12.553 2.02 16.533a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.873-1.295 1.226-1.994a.076.076 0 0 0-.041-.105 13.1 13.1 0 0 1-1.872-.892.077.077 0 0 1-.008-.128c.126-.094.252-.192.372-.291a.074.074 0 0 1 .077-.01c3.927 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.009c.12.099.246.198.373.292a.077.077 0 0 1-.006.128 12.3 12.3 0 0 1-1.873.891.077.077 0 0 0-.041.106c.36.698.772 1.362 1.226 1.993a.076.076 0 0 0 .084.028 19.84 19.84 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-4.602-.838-8.6-3.549-12.137a.06.06 0 0 0-.031-.028ZM8.02 14.114c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418Zm7.974 0c-1.183 0-2.156-1.085-2.156-2.419 0-1.333.955-2.419 2.156-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418Z"/></svg>
+          Join the Discord
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO + COUNTDOWN ============ -->
+  <header class="relative pt-32 pb-20 overflow-hidden bg-hero-gradient">
+    <div class="absolute inset-0 slash-divider opacity-5 pointer-events-none"></div>
+    <div class="max-w-5xl mx-auto px-6 relative z-10 text-center space-y-6">
+      <p class="font-callout text-xl md:text-2xl text-cyan glow-cyan-text">Real Pirates. Real Cash. Every Week.</p>
+      <h1 class="font-display text-5xl md:text-7xl text-flame glow-flame leading-none">The Bounty Board</h1>
+      <p class="max-w-2xl mx-auto text-white/70 text-lg leading-relaxed">
+        Climb the Blackbeard's Wake leaderboard and walk away with actual money. A new
+        <span class="text-cyan font-semibold">weekly</span> contest kicks off every Monday and pays out
+        Sunday night. Free to play. No purchase required.
+      </p>
+    </div>
+  </header>
+
+  <!-- ============ PRIZE BREAKDOWN (badges) ============ -->
+  <section id="prizes" class="bg-section-alt py-24 relative overflow-hidden" aria-label="Prize Breakdown">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[2px] bg-gradient-to-r from-transparent via-flame/50 to-transparent"></div>
+
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-14">
+        <h2 class="font-display text-4xl md:text-5xl text-flame glow-flame">Weekly Bounty</h2>
+        <p class="mt-4 text-white/70 text-lg">Three captains cash out every week.</p>
+      </div>
+
+      <!-- Badges row (matches homepage layout) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6 items-end max-w-4xl mx-auto">
+        <!-- 2nd place (left, slightly lower) -->
+        <div class="order-2 md:order-1 flex flex-col items-center text-center">
+          <img src="assets/badges/2ndBadge.png" alt="Second place — $50" class="w-44 md:w-48 drop-shadow-[0_0_25px_rgba(24,214,255,0.25)]" />
+          <p class="mt-4 font-display text-2xl text-cyan tracking-wide">2nd Place</p>
+          <p class="text-white/60 text-sm">Runner-up bounty</p>
+        </div>
+
+        <!-- 1st place (center, taller) -->
+        <div class="order-1 md:order-2 flex flex-col items-center text-center">
+          <img src="assets/badges/1stBadge.png" alt="First place — $100" class="w-56 md:w-64 drop-shadow-[0_0_35px_rgba(255,79,24,0.35)] animate-subtle-pulse" />
+          <p class="mt-4 font-display text-3xl text-flame glow-flame tracking-wide">Pirate King</p>
+          <p class="text-white/60 text-sm">Top of the leaderboard</p>
+        </div>
+
+        <!-- 3rd place (right, slightly lower) -->
+        <div class="order-3 flex flex-col items-center text-center">
+          <img src="assets/badges/3rdBadge.png" alt="Third place — $25" class="w-44 md:w-48 drop-shadow-[0_0_25px_rgba(223,43,65,0.25)]" />
+          <p class="mt-4 font-display text-2xl text-cyan tracking-wide">3rd Place</p>
+          <p class="text-white/60 text-sm">Bronze cutlass</p>
+        </div>
+      </div>
+
+      <!-- Reset banner -->
+      <div class="mt-14 max-w-2xl mx-auto text-center">
+        <p class="inline-flex items-center gap-2 rounded-full border border-flame/30 bg-flame/10 px-5 py-2 text-base md:text-lg font-semibold tracking-wide text-flame">
+          New challenge every Monday · Resets Sunday 11:59 PM CST
+        </p>
+      </div>
+
+      <p class="mt-8 max-w-2xl mx-auto text-center text-white/40 text-xs leading-relaxed">
+        Prizes are paid via Tremendous (or another payout method selected by Sponsor). Each player may win only one prize per contest period — see the official rules for details.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ COUNTDOWN ============ -->
+  <section id="countdown" class="bg-dark py-24 relative overflow-hidden" aria-label="Weekly Countdown">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[2px] bg-gradient-to-r from-transparent via-cyan/50 to-transparent"></div>
+
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h2 class="font-display text-4xl md:text-5xl text-flame glow-flame">Time on the Clock</h2>
+        <p class="mt-4 text-white/70 text-lg">Until the leaderboard locks &amp; cashes out.</p>
+      </div>
+
+      <div class="bg-dark-100/80 border border-cyan/30 rounded-3xl p-8 backdrop-blur-sm glow-cyan">
+        <div class="flex items-center justify-between mb-4">
+          <p class="font-callout text-2xl text-cyan tracking-wide">Weekly Contest</p>
+          <span class="text-xs uppercase tracking-widest text-white/50">Resets Sunday</span>
+        </div>
+        <div id="weekly-countdown" class="grid grid-cols-4 gap-3 text-center tabular-nums" aria-live="polite">
+          <div class="bg-dark/60 rounded-xl py-3 border border-white/5">
+            <div class="font-display text-4xl text-cyan glow-cyan-text" data-unit="days">--</div>
+            <div class="text-[10px] uppercase tracking-widest text-white/50 mt-1">Days</div>
+          </div>
+          <div class="bg-dark/60 rounded-xl py-3 border border-white/5">
+            <div class="font-display text-4xl text-cyan glow-cyan-text" data-unit="hours">--</div>
+            <div class="text-[10px] uppercase tracking-widest text-white/50 mt-1">Hours</div>
+          </div>
+          <div class="bg-dark/60 rounded-xl py-3 border border-white/5">
+            <div class="font-display text-4xl text-cyan glow-cyan-text" data-unit="minutes">--</div>
+            <div class="text-[10px] uppercase tracking-widest text-white/50 mt-1">Minutes</div>
+          </div>
+          <div class="bg-dark/60 rounded-xl py-3 border border-white/5">
+            <div class="font-display text-4xl text-cyan glow-cyan-text" data-unit="seconds">--</div>
+            <div class="text-[10px] uppercase tracking-widest text-white/50 mt-1">Seconds</div>
+          </div>
+        </div>
+        <p class="mt-4 text-xs text-white/40 text-center">Ends Sunday at 11:59 PM CST · <span id="weekly-local"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how" class="bg-section-alt py-24 relative overflow-hidden" aria-label="How It Works">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[2px] bg-gradient-to-r from-transparent via-flame/50 to-transparent"></div>
+
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="font-display text-4xl md:text-5xl text-flame text-center mb-4 glow-flame">How It Works</h2>
+      <p class="text-center text-white/60 max-w-xl mx-auto mb-16">Four simple steps. Skill on the line, real money in your inbox.</p>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <article class="text-center space-y-3 group">
+          <div class="w-14 h-14 mx-auto bg-dark-100 border border-cyan/20 rounded-2xl flex items-center justify-center text-2xl group-hover:border-cyan/50 transition-all">⚓</div>
+          <h3 class="text-lg font-semibold text-cyan">1. Download &amp; Play</h3>
+          <p class="text-white/60 text-sm leading-relaxed">Grab Blackbeard's Wake free on iOS or Android. No purchase required to enter.</p>
+        </article>
+        <article class="text-center space-y-3 group">
+          <div class="w-14 h-14 mx-auto bg-dark-100 border border-crimson/20 rounded-2xl flex items-center justify-center text-2xl group-hover:border-crimson/50 transition-all">🎯</div>
+          <h3 class="text-lg font-semibold text-cyan">2. Post a Score</h3>
+          <p class="text-white/60 text-sm leading-relaxed">Create a free account and your scores post to the leaderboard automatically. Only your best score in the period counts.</p>
+        </article>
+        <article class="text-center space-y-3 group">
+          <div class="w-14 h-14 mx-auto bg-dark-100 border border-flame/20 rounded-2xl flex items-center justify-center text-2xl group-hover:border-flame/50 transition-all">🏴‍☠️</div>
+          <h3 class="text-lg font-semibold text-cyan">3. Climb the Board</h3>
+          <p class="text-white/60 text-sm leading-relaxed">Play as often as you want before the clock runs out. Unlimited entries, all skill.</p>
+        </article>
+        <article class="text-center space-y-3 group">
+          <div class="w-14 h-14 mx-auto bg-dark-100 border border-cyan/20 rounded-2xl flex items-center justify-center text-2xl group-hover:border-cyan/50 transition-all">💰</div>
+          <h3 class="text-lg font-semibold text-cyan">4. Get Paid</h3>
+          <p class="text-white/60 text-sm leading-relaxed">Winners are emailed within a reasonable time after the period ends — respond within 7 days to claim.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAIR PLAY ============ -->
+  <section class="bg-dark py-24" aria-label="Fair Play & Eligibility">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+
+      <div class="bg-dark-100/60 border border-white/5 rounded-3xl p-8">
+        <h3 class="font-display text-3xl text-flame glow-flame mb-4">Eligibility</h3>
+        <ul class="space-y-3 text-white/70 text-sm leading-relaxed">
+          <li class="flex gap-3"><span class="text-cyan">›</span> Open to legal U.S. residents <span class="text-white/90">18+</span> at time of entry.</li>
+          <li class="flex gap-3"><span class="text-cyan">›</span> Void where prohibited by law.</li>
+          <li class="flex gap-3"><span class="text-cyan">›</span> Employees of Sponsor and their households are not eligible.</li>
+          <li class="flex gap-3"><span class="text-cyan">›</span> No purchase necessary. Purchases do not improve your odds or scoring.</li>
+        </ul>
+      </div>
+
+      <div class="bg-dark-100/60 border border-white/5 rounded-3xl p-8">
+        <h3 class="font-display text-3xl text-flame glow-flame mb-4">Fair Play</h3>
+        <ul class="space-y-3 text-white/70 text-sm leading-relaxed">
+          <li class="flex gap-3"><span class="text-flame">›</span> Scores from bots, automation, or modified clients are invalidated.</li>
+          <li class="flex gap-3"><span class="text-flame">›</span> Exploiting bugs or glitches disqualifies the run — and possibly the account.</li>
+          <li class="flex gap-3"><span class="text-flame">›</span> All scores are subject to verification by Sponsor.</li>
+          <li class="flex gap-3"><span class="text-flame">›</span> Ties broken by who hit the score <em>first</em>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OFFICIAL RULES CTA ============ -->
+  <section id="rules" class="bg-cta-gradient py-24 relative overflow-hidden">
+    <div class="absolute inset-0 slash-divider opacity-10 pointer-events-none"></div>
+    <div class="max-w-3xl mx-auto px-6 text-center space-y-6 relative z-10">
+      <h2 class="font-display text-4xl md:text-5xl text-flame glow-flame">Official Rules</h2>
+      <p class="text-white/80 text-lg leading-relaxed">
+        The full, legally binding terms — sponsor info, eligibility, prize fulfillment, governing law, and everything in between.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <a href="official-rules.html" class="inline-flex items-center gap-2 bg-flame text-white px-7 py-3 rounded-full font-semibold hover:bg-flame-100 transition-colors shadow-lg shadow-flame/25">
+          Read the Official Rules
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <a href="contest-terms.html" class="inline-flex items-center gap-2 border border-white/30 text-white px-7 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
+          Contest Terms &amp; Conditions
+        </a>
+        <a href="mailto:support@blackbeard.world" class="inline-flex items-center gap-2 border border-white/30 text-white px-7 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors">
+          Contact Support
+        </a>
+      </div>
+      <p class="text-white/50 text-xs pt-4">Sponsored by Blackbeard World LLC · Governed by the laws of the State of Tennessee.</p>
+    </div>
+  </section>
+
+  <!-- ============ DOWNLOAD CTA ============ -->
+  <section id="download" class="bg-dark py-20 relative overflow-hidden">
+    <div class="max-w-2xl mx-auto px-6 text-center space-y-6 relative z-10">
+      <h2 class="font-display text-3xl md:text-4xl text-flame glow-flame">Ready to Compete?</h2>
+      <p class="text-white/70">Free to play. The clock is already running.</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#" id="appstore-link-footer" class="inline-block hover:opacity-90 transition-opacity" aria-label="Open Blackbeard's Wake on the App Store">
+          <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-14" />
+        </a>
+        <a href="#" id="playstore-link-footer" class="inline-block hover:opacity-90 transition-opacity" aria-label="Open Blackbeard's Wake on Google Play">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play" class="h-14" />
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="bg-dark border-t border-white/5 py-10" role="contentinfo">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
+      <p>&copy; 2026 Blackbeard Games. All rights reserved.</p>
+      <div class="flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2">
+        <a href="index.html" class="hover:text-cyan transition-colors">Home</a>
+        <a href="official-rules.html" class="hover:text-cyan transition-colors">Official Rules</a>
+        <a href="contest-terms.html" class="hover:text-cyan transition-colors">Contest Terms</a>
+        <a href="privacy-policy.html" class="hover:text-cyan transition-colors">Privacy Policy</a>
+        <a href="support.html" class="hover:text-cyan transition-colors">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // -------- Shared store/Discord links --------
+    const STORE_LINKS = {
+      ios: 'https://apps.apple.com/us/app/blackbeards-wake/id6759919373',
+      android: 'https://play.google.com/store/apps/details?id=com.bbw.blackbeardswake',
+      discord: 'https://discord.gg/X53Ecc9TWH'
+    };
+    ['discord-link-nav', 'discord-link-nav-mobile'].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.href = STORE_LINKS.discord;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    });
+    ['appstore-link-footer'].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.href = STORE_LINKS.ios;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    });
+    ['playstore-link-footer'].forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.href = STORE_LINKS.android;
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    });
+
+    // -------- Mobile menu --------
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    menuBtn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+    document.querySelectorAll('.mobile-nav-link').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+    // -------- Countdown timers --------
+    // Both contests end on "America/Chicago" wall-clock time (CST/CDT). We compute the
+    // current Chicago wall-clock from Intl, then build target wall-clock components and
+    // diff them using Date.UTC for an apples-to-apples millisecond difference.
+    const chicagoParts = (date) => {
+      const fmt = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Chicago',
+        year: 'numeric', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit', second: '2-digit',
+        weekday: 'short', hour12: false
+      });
+      const parts = Object.fromEntries(fmt.formatToParts(date).map(p => [p.type, p.value]));
+      const weekdayMap = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
+      return {
+        y: parseInt(parts.year, 10),
+        m: parseInt(parts.month, 10),
+        d: parseInt(parts.day, 10),
+        h: parseInt(parts.hour === '24' ? '0' : parts.hour, 10),
+        mi: parseInt(parts.minute, 10),
+        s: parseInt(parts.second, 10),
+        wd: weekdayMap[parts.weekday]
+      };
+    };
+
+    const renderCountdown = (rootId, totalMs) => {
+      const root = document.getElementById(rootId);
+      if (!root) return;
+      if (totalMs < 0) totalMs = 0;
+      const totalSec = Math.floor(totalMs / 1000);
+      const days = Math.floor(totalSec / 86400);
+      const hours = Math.floor((totalSec % 86400) / 3600);
+      const minutes = Math.floor((totalSec % 3600) / 60);
+      const seconds = totalSec % 60;
+      const pad = (n) => String(n).padStart(2, '0');
+      root.querySelector('[data-unit="days"]').textContent = pad(days);
+      root.querySelector('[data-unit="hours"]').textContent = pad(hours);
+      root.querySelector('[data-unit="minutes"]').textContent = pad(minutes);
+      root.querySelector('[data-unit="seconds"]').textContent = pad(seconds);
+    };
+
+    const renderLocalEndTimes = () => {
+      // Compute the next Sunday 23:59 Chicago wall-clock as a real UTC timestamp and
+      // format it in the visitor's locale.
+      const now = new Date();
+      const c = chicagoParts(now);
+
+      let daysAhead = (7 - c.wd) % 7;
+      const candidateMsWeekly = Date.UTC(c.y, c.m - 1, c.d + daysAhead, 23, 59, 0);
+      const nowMsChicago = Date.UTC(c.y, c.m - 1, c.d, c.h, c.mi, c.s);
+      let weeklyUtcMs = candidateMsWeekly;
+      if (candidateMsWeekly - nowMsChicago < 0) weeklyUtcMs = Date.UTC(c.y, c.m - 1, c.d + 7, 23, 59, 0);
+      const approxWeekly = new Date(weeklyUtcMs);
+      const wp = chicagoParts(approxWeekly);
+      const wallWeekly = Date.UTC(wp.y, wp.m - 1, wp.d, wp.h, wp.mi, wp.s);
+      const offsetWeekly = wallWeekly - weeklyUtcMs;
+      const weeklyRealUtc = weeklyUtcMs - offsetWeekly;
+      const weeklyLocal = new Date(weeklyRealUtc);
+
+      const localFmt = new Intl.DateTimeFormat(undefined, {
+        weekday: 'short', month: 'short', day: 'numeric',
+        hour: 'numeric', minute: '2-digit', timeZoneName: 'short'
+      });
+      const wEl = document.getElementById('weekly-local');
+      if (wEl) wEl.textContent = 'your time: ' + localFmt.format(weeklyLocal);
+    };
+
+    const tick = () => {
+      const now = new Date();
+      const c = chicagoParts(now);
+      const nowMs = Date.UTC(c.y, c.m - 1, c.d, c.h, c.mi, c.s);
+
+      // Weekly target: next Sunday 23:59:59 Chicago wall-clock
+      let daysAhead = (7 - c.wd) % 7;
+      let weeklyTargetMs = Date.UTC(c.y, c.m - 1, c.d + daysAhead, 23, 59, 59);
+      if (weeklyTargetMs - nowMs <= 0) {
+        weeklyTargetMs = Date.UTC(c.y, c.m - 1, c.d + 7, 23, 59, 59);
+      }
+
+      renderCountdown('weekly-countdown', weeklyTargetMs - nowMs);
+    };
+
+    renderLocalEndTimes();
+    tick();
+    setInterval(tick, 1000);
+    // Re-render local end-time strings hourly in case the period rolls over.
+    setInterval(renderLocalEndTimes, 60 * 60 * 1000);
+  </script>
+</body>
+</html>
