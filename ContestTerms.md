@@ -40,9 +40,9 @@ Users who do not agree to these Contest Terms may still be able to play Blackbea
 
 The Contest is a weekly skill-based leaderboard contest.
 
-Each weekly Contest ends on Sunday at 9:00 PM Central Time.
+Each weekly Contest ends on Sunday at 9:00 PM Eastern Time.
 
-For clarity, "Central Time" means Central Time in the United States, observing CST or CDT as applicable.
+For clarity, "Eastern Time" means Eastern Time in the United States, observing EST or EDT as applicable.
 
 Unless otherwise stated in the app, each new weekly Contest begins immediately after the prior weekly Contest ends.
 

@@ -168,7 +168,7 @@
       <!-- Reset banner -->
       <div class="mt-14 max-w-2xl mx-auto text-center">
         <p class="inline-flex items-center gap-2 rounded-full border border-flame/30 bg-flame/10 px-5 py-2 text-base md:text-lg font-semibold tracking-wide text-flame">
-          New challenge every Monday · Resets Sunday 11:59 PM CST
+          New challenge every Monday · Resets Sunday 9:00 PM ET
         </p>
       </div>
 
@@ -211,7 +211,7 @@
             <div class="text-[10px] uppercase tracking-widest text-white/50 mt-1">Seconds</div>
           </div>
         </div>
-        <p class="mt-4 text-xs text-white/40 text-center">Ends Sunday at 11:59 PM CST · <span id="weekly-local"></span></p>
+        <p class="mt-4 text-xs text-white/40 text-center">Ends Sunday at 9:00 PM ET · <span id="weekly-local"></span></p>
       </div>
     </div>
   </section>
@@ -365,12 +365,12 @@
     document.querySelectorAll('.mobile-nav-link').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
 
     // -------- Countdown timers --------
-    // Both contests end on "America/Chicago" wall-clock time (CST/CDT). We compute the
-    // current Chicago wall-clock from Intl, then build target wall-clock components and
-    // diff them using Date.UTC for an apples-to-apples millisecond difference.
-    const chicagoParts = (date) => {
+    // Weekly contest ends on Sunday at 21:00 "America/New_York" wall-clock (ET, observing
+    // EST/EDT). We compute the current ET wall-clock from Intl, build the target wall-clock
+    // components, and diff them via Date.UTC for an apples-to-apples millisecond difference.
+    const etParts = (date) => {
       const fmt = new Intl.DateTimeFormat('en-US', {
-        timeZone: 'America/Chicago',
+        timeZone: 'America/New_York',
         year: 'numeric', month: '2-digit', day: '2-digit',
         hour: '2-digit', minute: '2-digit', second: '2-digit',
         weekday: 'short', hour12: false
@@ -405,18 +405,18 @@
     };
 
     const renderLocalEndTimes = () => {
-      // Compute the next Sunday 23:59 Chicago wall-clock as a real UTC timestamp and
+      // Compute the next Sunday 21:00 ET wall-clock as a real UTC timestamp and
       // format it in the visitor's locale.
       const now = new Date();
-      const c = chicagoParts(now);
+      const c = etParts(now);
 
       let daysAhead = (7 - c.wd) % 7;
-      const candidateMsWeekly = Date.UTC(c.y, c.m - 1, c.d + daysAhead, 23, 59, 0);
-      const nowMsChicago = Date.UTC(c.y, c.m - 1, c.d, c.h, c.mi, c.s);
+      const candidateMsWeekly = Date.UTC(c.y, c.m - 1, c.d + daysAhead, 21, 0, 0);
+      const nowMsEt = Date.UTC(c.y, c.m - 1, c.d, c.h, c.mi, c.s);
       let weeklyUtcMs = candidateMsWeekly;
-      if (candidateMsWeekly - nowMsChicago < 0) weeklyUtcMs = Date.UTC(c.y, c.m - 1, c.d + 7, 23, 59, 0);
+      if (candidateMsWeekly - nowMsEt < 0) weeklyUtcMs = Date.UTC(c.y, c.m - 1, c.d + 7, 21, 0, 0);
       const approxWeekly = new Date(weeklyUtcMs);
-      const wp = chicagoParts(approxWeekly);
+      const wp = etParts(approxWeekly);
       const wallWeekly = Date.UTC(wp.y, wp.m - 1, wp.d, wp.h, wp.mi, wp.s);
       const offsetWeekly = wallWeekly - weeklyUtcMs;
       const weeklyRealUtc = weeklyUtcMs - offsetWeekly;
@@ -432,14 +432,14 @@
 
     const tick = () => {
       const now = new Date();
-      const c = chicagoParts(now);
+      const c = etParts(now);
       const nowMs = Date.UTC(c.y, c.m - 1, c.d, c.h, c.mi, c.s);
 
-      // Weekly target: next Sunday 23:59:59 Chicago wall-clock
+      // Weekly target: next Sunday 21:00:00 ET wall-clock
       let daysAhead = (7 - c.wd) % 7;
-      let weeklyTargetMs = Date.UTC(c.y, c.m - 1, c.d + daysAhead, 23, 59, 59);
+      let weeklyTargetMs = Date.UTC(c.y, c.m - 1, c.d + daysAhead, 21, 0, 0);
       if (weeklyTargetMs - nowMs <= 0) {
-        weeklyTargetMs = Date.UTC(c.y, c.m - 1, c.d + 7, 23, 59, 59);
+        weeklyTargetMs = Date.UTC(c.y, c.m - 1, c.d + 7, 21, 0, 0);
       }
 
       renderCountdown('weekly-countdown', weeklyTargetMs - nowMs);
